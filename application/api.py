@@ -191,6 +191,20 @@ def find_dnsp(lat, long):
 
     return jsonify(dnsp_name)
 
+ # Finding the AER benchmarking (based on the AER Bnechmarking for energy consumptions)
+@app.route('/AERBenchmarking/<postcode>')
+def find_aer_bm(postcode):
+    AER = pd.read_csv(os.path.join('application', 'AERBenchmark.csv'))
+    cols = AER.columns.drop(['Season','Postcode','Climate Zone','State Zone Season'])
+    AER[cols] = AER[cols].apply(pd.to_numeric, errors='coerce').fillna(0)
+    AER['Postcode'] = AER['Postcode'].astype(int)
+    AER['Distance']=abs(AER['Postcode']-float(postcode))
+    AER_ = AER[AER['Distance']==AER['Distance'].min()].reset_index(drop=True)
+    if AER_.shape[0]>4:
+        AER_ = AER_[AER_['Postcode']==AER_['Postcode'].min()].reset_index(drop=True)
+    # AER_
+    AER_2 = AER_.to_json(orient='records')
+    return jsonify(AER_2)
 
 # #  Tariff Docs
 @app.route('/tariff-source/<tariff_id>')

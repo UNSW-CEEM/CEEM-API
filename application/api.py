@@ -198,7 +198,8 @@ def find_dnsp(lat, long):
             break
     if (found_dnsp):
         dnsp_name = s_list[dnsp_index].properties.get("network")
-
+    if dnsp_name == 'Actewagl':
+        dnsp_name = 'EvoEnergy'
     return jsonify(dnsp_name)
 
  # Finding the AER benchmarking (based on the AER Bnechmarking for energy consumptions)

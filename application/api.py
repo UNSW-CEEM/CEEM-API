@@ -46,6 +46,16 @@ def base():
 #     return jsonify(data_loaded)
 
 
+@app.route('/BusinessLoadProfiles/<bus_type>')
+def bus_load_profiles(bus_type):
+    data_file = pd.read_csv(os.path.join('application', 'Bus_LP.csv')) 
+    data_file = data_file[['TS',bus_type]].copy()
+    data_file = data_file.rename(columns={bus_type:'kWh'})
+    data_file = data_file.to_json(orient='records')
+    return jsonify(data_file)
+
+
+
 # Here you go to http://127.0.0.1:5000/Tariffs/AllTariffs
 # this is for returning all tariffs stored in the jason file
 

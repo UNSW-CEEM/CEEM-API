@@ -38,6 +38,13 @@ def bus_load_profiles_list():
     col = [col for col in data_file.columns if col != 'TS']
     return jsonify(col)
 
+# https://ceem-api.herokuapp.com/BusinessLoadProfiles_List_temp
+@app.route('/BusinessLoadProfiles_List_temp')
+def bus_load_profiles_list_temp():
+    data_file = pd.read_csv(os.path.join('application', 'Bus_LP_temp.csv')) 
+    col = [col for col in data_file.columns if col != 'TS']
+    return jsonify(col)
+
 
 @app.route('/Tariffs/AllTariffs')
 def Alltariffs():

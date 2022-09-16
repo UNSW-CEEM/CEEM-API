@@ -19,33 +19,10 @@ CORS(app)
 
 @app.route('/')
 def base():
-    return jsonify('Welcome to CEEM''s API centre! Please select an API. For example: api.ceem.org.au/electricity-tariffs/network')
+    return jsonify('Welcome to CEEM''s API centre! Please select an API. For example: /electricity-tariffs/network')
     # return jsonify(cwd)
 
-
-# Here you go to http://127.0.0.1:5000/LoadProfiles/Avg
-# This is for returning the average load profile of all customers
-
-# @app.route('/LoadProfiles/Avg')
-# def avgload():
-#     with open(os.path.join('application','AllData.json')) as data_file:
-#         data_loaded = json.load(data_file)
-#         return jsonify(data_loaded)
-
-
-# Here you go to http://127.0.0.1:5000/LoadProfiles/Demog/lpnum
-# this is for returning the average load profile of a selected subset of users
-
-# @app.route('/LoadProfiles/Demog/<lpnum>')
-# def data(lpnum):
-#     with open(os.path.join('application','AllData_Demog.json')) as data_file:
-#         data_loaded = json.load(data_file)
-#         for i in range(len(data_loaded)):
-#             data_loaded[i] = {k: data_loaded[i][k] for k in data_loaded[i] if (k == lpnum or k == 'TS')}
-#
-#     return jsonify(data_loaded)
-
-
+# https://ceem-api.herokuapp.com/BusinessLoadProfiles/utilities
 @app.route('/BusinessLoadProfiles/<bus_type>')
 def bus_load_profiles(bus_type):
     data_file = pd.read_csv(os.path.join('application', 'Bus_LP.csv')) 
@@ -54,59 +31,19 @@ def bus_load_profiles(bus_type):
     data_file = data_file.to_json(orient='records')
     return jsonify(data_file)
 
+# https://ceem-api.herokuapp.com/BusinessLoadProfiles_List
+@app.route('/BusinessLoadProfiles_List')
+def bus_load_profiles_list():
+    data_file = pd.read_csv(os.path.join('application', 'Bus_LP.csv')) 
+    col = [col for col in data_file.columns if col != 'TS']
+    return jsonify(col)
 
-
-# Here you go to http://127.0.0.1:5000/Tariffs/AllTariffs
-# this is for returning all tariffs stored in the jason file
 
 @app.route('/Tariffs/AllTariffs')
 def Alltariffs():
     with open(os.path.join('application', 'AllTariffs_Retail.json')) as data_file:
         data_loaded = json.load(data_file)
         return jsonify(data_loaded)
-
-# # This part is for previous versions of retail tariffs
-# @app.route('/elec-tariffs/retail-previous-version/<version>')
-# def retail_tariff(version):
-#     with open(os.path.join('application', 'AllTariffs_Retail_{}.json'.format(version))) as data_file:
-#         data_loaded = json.load(data_file)
-#         return jsonify(data_loaded)
-#
-# #  Track the versions and dates
-# @app.route('/elec-tariffs/retail-previous-version-list')
-# def retail_tariff(version):
-#     with open(os.path.join('application', 'AllTariffs_Retail_Version_Track.json')) as data_file:
-#         data_loaded = json.load(data_file)
-#         return jsonify(data_loaded)
-#
-# # Most up to date version
-# @app.route('/elec-tariffs/retail')
-# def retail_tariff():
-#     with open(os.path.join('application', 'AllTariffs_Retail.json')) as data_file:
-#         data_loaded = json.load(data_file)
-#         return jsonify(data_loaded)
-#
-#  # This part is for previous versions of network tariffs
-#
-# @app.route('/elec-tariffs/network-previous-versions/<version>')
-# def network_tariff(version):
-#     with open(os.path.join('application', 'AllTariffs_Network_{}.json'.format(version))) as data_file:
-#          data_loaded = json.load(data_file)
-#          return jsonify(data_loaded)
-#
-# #  Track the versions and dates
-# @app.route('/elec-tariffs/network-previous-versions-list')
-# def network_tariff():
-#     with open(os.path.join('application', 'AllTariffs_Network_Version_Track.json')) as data_file:
-#          data_loaded = json.load(data_file)
-#          return jsonify(data_loaded)
-#
-# # Most up to date version
-# @app.route('/elec-tariffs/network')
-# def network_tariff():
-#     with open(os.path.join('application', 'AllTariffs_Network.json')) as data_file:
-#          data_loaded = json.load(data_file)
-#          return jsonify(data_loaded)
 
 
 # This part is for previous versions of retail tariffs or the version list
@@ -119,6 +56,7 @@ def retail_tariff_v(version):
 
 
 #  the version compatible with Tariff tool (nb: this name will change to retail and the previous one will be removed. It is not removed now because it is being used by SunSpoT
+# https://ceem-api.herokuapp.com/electricity-tariffs/retail
 @app.route('/electricity-tariffs/retail')
 def retail_tariff():
     with open(os.path.join('application', 'AllTariffs_Retail.json')) as data_file:
@@ -157,6 +95,7 @@ def network_tariff():
 
 
 #  weather data from NASA Power
+# https://ceem-api.herokuapp.com/weather/20220101/20220201/-32/150
 @app.route('/weather/<start_date>/<end_date>/<lat>/<long>')
 def weather_data(start_date, end_date, lat, long):
     lat = round(2 * float(lat)) / 2
@@ -177,6 +116,7 @@ def weather_data(start_date, end_date, lat, long):
         return jsonify(data_w2)
 
  # Finding the dnsp
+#  https://ceem-api.herokuapp.com/dnsp/-32/150
 @app.route('/dnsp/<lat>/<long>')
 def find_dnsp(lat, long):
     # path_to_file = 'dnsp_finder/latest-distribution-boundaries.geojson'
@@ -203,6 +143,7 @@ def find_dnsp(lat, long):
     return jsonify(dnsp_name)
 
  # Finding the AER benchmarking (based on the AER Bnechmarking for energy consumptions)
+#  https://ceem-api.herokuapp.com/AERBenchmarking/2010
 @app.route('/AERBenchmarking/<postcode>')
 def find_aer_bm(postcode):
     AER = pd.read_csv(os.path.join('application', 'AERBenchmark.csv'))

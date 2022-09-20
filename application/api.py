@@ -39,6 +39,7 @@ def bus_load_profiles_list():
     return jsonify(col)
 
 # https://ceem-api.herokuapp.com/BusinessLoadProfiles_List_temp
+# to be removed after Nabeen confirms swicth to new list
 @app.route('/BusinessLoadProfiles_List_temp')
 def bus_load_profiles_list_temp():
     data_file = pd.read_csv(os.path.join('application', 'Bus_LP_temp.csv')) 
@@ -157,7 +158,13 @@ def find_aer_bm(postcode):
     cols = AER.columns.drop(['Season','Postcode','Climate Zone','State Zone Season'])
     AER[cols] = AER[cols].apply(pd.to_numeric, errors='coerce').fillna(0)
     AER['Postcode'] = AER['Postcode'].astype(int)
-    AER['Distance']=abs(AER['Postcode']-float(postcode))
+    PC = float(postcode)
+    # Use QLD for NT and WA for now
+    if PC <2000:
+        PC=4000
+    elif (PC<7000) & (PC>=6000):
+        PC=4000
+    AER['Distance']=abs(AER['Postcode']-PC)
     AER_ = AER[AER['Distance']==AER['Distance'].min()].reset_index(drop=True)
     if AER_.shape[0]>4:
         AER_ = AER_[AER_['Postcode']==AER_['Postcode'].min()].reset_index(drop=True)

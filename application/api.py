@@ -155,7 +155,7 @@ def find_dnsp(lat, long):
 @app.route('/AERBenchmarking/<postcode>')
 def find_aer_bm(postcode):
     AER = pd.read_csv(os.path.join('application', 'AERBenchmark.csv'))
-    cols = AER.columns.drop(['Season','Postcode','Climate Zone','State Zone Season'])
+    cols = AER.columns.drop(['Season','Postcode','Climate Zone','State Zone Season','Household size'])
     AER[cols] = AER[cols].apply(pd.to_numeric, errors='coerce').fillna(0)
     AER['Postcode'] = AER['Postcode'].astype(int)
     PC = float(postcode)

@@ -128,7 +128,8 @@ def weather_data(start_date, end_date, lat, long):
 @app.route('/dnsp/<lat>/<long>')
 def find_dnsp(lat, long):
     # path_to_file = 'dnsp_finder/latest-distribution-boundaries.geojson'
-    with open(os.path.join('application', 'latest-distribution-boundaries.geojson')) as f:
+    # with open(os.path.join('application', 'latest-distribution-boundaries.geojson')) as f:
+    with open(os.path.join('application', 'distribution_boundaries_2022.geojson')) as f:
         gj = geojson.load(f)
 
     s_list = gj['features']
@@ -148,6 +149,8 @@ def find_dnsp(lat, long):
         dnsp_name = s_list[dnsp_index].properties.get("network")
     if dnsp_name == 'Actewagl':
         dnsp_name = 'EvoEnergy'
+    if dnsp_name == '':
+        dnsp_name = 'Off-grid'
     return jsonify(dnsp_name)
 
  # Finding the AER benchmarking (based on the AER Bnechmarking for energy consumptions)

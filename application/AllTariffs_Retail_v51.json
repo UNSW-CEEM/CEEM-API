@@ -7,7 +7,7 @@
 "ProviderType": "Retailer",
 "State": "NSW",
 "Type": "Demand",
-"Name": "Time of Use Demand Charge (Ausgrid) Business",
+"Name": "Time of Use Demand Charge (Ausgrid) Business - sample",
 "Parameters": {
 "Daily": {
 "Unit": "$/day",
@@ -44,8 +44,33 @@
 "Value": 0.385,
 "Weekday": true,
 "Weekend": false
+},
+"Other Demand": {
+"Day Average": false,
+"Demand Window Length": 1,
+"Min Demand (kW)": 0,
+"Min Demand Charge ($)": 0,
+"Month": [
+1,
+2,
+3,
+4,
+5
+],
+"Number of Peaks": 1,
+"TimeIntervals": {
+"T1": [
+"08:00",
+"12:00"
+]
+},
+"Unit": "$/kW/Day",
+"Value": 0.185,
+"Weekday": true,
+"Weekend": false
 }
 },
+"FiT": {"Unit": "$/kWh", "Value": 0.06},
 "TOU": {
 "Shoulder workdays": {
 "Month": [

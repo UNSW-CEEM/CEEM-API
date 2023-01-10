@@ -123,6 +123,27 @@ def weather_data(start_date, end_date, lat, long):
         data_w2 = data_w.to_json(orient='records')
         return jsonify(data_w2)
 
+#  weather data from NASA Power THIS PART IS FOR TESTING THE AUTOMATIC UPDATE. WHEN TEST IS DONE IT WILL BE REMOVED
+# https://ceem-api.herokuapp.com/weather2/20220101/20220201/-32/150
+@app.route('/weather2/<start_date>/<end_date>/<lat>/<long>')
+def weather_data2(start_date, end_date, lat, long):
+    lat = round(2 * float(lat)) / 2
+    long = round(2 * float(long)) / 2
+    with sqlite3.connect(os.path.join('application', 'nasa_power2.db')) as con:
+        lat_long_list = pd.read_sql_query(con=con, sql='select distinct lat, long from data')
+        lat_long_list2 = lat_long_list.copy()
+        lat_long_list2['Lat'] = abs(lat_long_list['Lat'] - lat)
+        lat_long_list2['Long'] = abs(lat_long_list['Long'] - long)
+        lat_long_list2['both'] = lat_long_list2['Lat'] + lat_long_list2['Long']
+        ind_min = lat_long_list2['both'].idxmin()
+        lat_new = lat_long_list.loc[ind_min, 'Lat']
+        long_new = lat_long_list.loc[ind_min, 'Long']
+        data_w = pd.read_sql_query(con=con, sql='select TS, CDD, HDD from data where TS >= {} and TS <= {}'
+                                                ' and lat == {} and long == {}'.format(start_date, end_date, str(lat_new), str(long_new)))
+        data_w = data_w.drop_duplicates(subset='TS', keep='last')
+        data_w2 = data_w.to_json(orient='records')
+        return jsonify(data_w2)
+
  # Finding the dnsp
 #  https://ceem-api.herokuapp.com/dnsp/-32/150
 @app.route('/dnsp/<lat>/<long>')

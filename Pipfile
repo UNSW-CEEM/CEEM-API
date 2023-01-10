@@ -12,6 +12,7 @@ gunicorn = "*"
 flask-cors = "*"
 geojson = "*"
 shapely = "*"
+requests = "*"
 
 [dev-packages]
 

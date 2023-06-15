@@ -11,6 +11,8 @@ from shapely.geometry import Point, shape
 
 from werkzeug.utils import secure_filename
 
+import shading_calculator
+
 app = Flask(__name__)
 CORS(app)
 # cwd = os.getcwd()
@@ -309,3 +311,8 @@ def upload_file():
       <input type=submit value=Upload>
     </form>
     '''
+# Calculates the shading array. For documentation and examples, please refer to shading_calculator.py
+@app.route('/calculate_shading/<pv_panel_group>/<shading_boxes>/<shading_cylinders>')
+def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders):
+    shading_array = shading_calculator.generate_shading_arrays_for_pv_panel_group(pv_panel_group, shading_boxes, shading_cylinders)
+    return jsonify(shading_array)

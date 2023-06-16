@@ -102,6 +102,11 @@ def network_tariff():
         data_loaded = json.load(data_file)
         return jsonify(data_loaded)
 
+@app.route('/electricity-tariffs/large-commercial-tariffs')
+def large_commercial_tariffs():
+    with open(os.path.join('application', 'AllTariffs_LargeCommercial.json')) as data_file:
+        data_loaded = json.load(data_file)
+        return jsonify(data_loaded)
 
 #  weather data from NASA Power
 # https://ceem-api.herokuapp.com/weather/20220101/20220201/-32/150

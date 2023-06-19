@@ -7630,7 +7630,7 @@
                         "Block2": {
                             "Value": 0.08,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -7653,7 +7653,7 @@
                         "Block2": {
                             "Value": 0.05,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -7676,7 +7676,7 @@
                         "Block2": {
                             "Value": 0.05,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -7699,7 +7699,7 @@
                         "Block2": {
                             "Value": 0.05,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -7722,7 +7722,7 @@
                         "Block2": {
                             "Value": 0.05,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -7745,7 +7745,7 @@
                         "Block2": {
                             "Value": 0.05,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -7768,7 +7768,7 @@
                         "Block2": {
                             "Value": 0.05,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -7791,7 +7791,7 @@
                         "Block2": {
                             "Value": 0.057,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -7814,7 +7814,7 @@
                         "Block2": {
                             "Value": 0.055,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -7911,7 +7911,7 @@
                         "Block2": {
                             "Value": 0.052,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -7995,7 +7995,7 @@
                         "Block2": {
                             "Value": 0.052,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -8079,7 +8079,7 @@
                         "Block2": {
                             "Value": 0.052,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -8163,7 +8163,7 @@
                         "Block2": {
                             "Value": 0.052,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },
@@ -8247,7 +8247,7 @@
                         "Block2": {
                             "Value": 0.052,
                             "Unit": "$/kWh",
-                            "HighBound": Infinity
+                            "HighBound": "Infinity"
                         }
                     }
                 },

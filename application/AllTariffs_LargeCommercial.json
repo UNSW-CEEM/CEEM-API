@@ -4,7 +4,1003 @@
             "Tariffs": [
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Endeavour",
+                    "Distributor": "Ausgrid",
+                    "Name": "Low Voltage (40-160 MWh, Capital)",
+                    "Parameters": {
+                        "NUOS": {
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.331069,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "TOU": {
+                                "Off Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "22:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.007098,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.007089,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                },
+                                "Summer/Winter Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.05422,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "14:00"
+                                        ],
+                                        "T2": [
+                                            "20:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.017554,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        4,
+                                        5,
+                                        9,
+                                        10
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.017554,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 4.665597
+                            }
+                        }
+                    },
+                    "State": "NSW",
+                    "Tariff ID": "TCT001",
+                    "Type": "TOU with Demand",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "Ausgrid",
+                    "Name": "Low Voltage (40-160 MWh, Non-Capital)",
+                    "State": "NSW",
+                    "Tariff ID": "TCT001b",
+                    "Type": "TOU with Demand",
+                    "Year": 2023,
+                    "ProviderType": "Network",
+                    "Parameters": {
+                        "NUOS": {
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.331069,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "TOU": {
+                                "Off Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "22:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.007098,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.007089,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                },
+                                "Summer/Winter Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.05422,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "14:00"
+                                        ],
+                                        "T2": [
+                                            "20:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.017554,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        4,
+                                        5,
+                                        9,
+                                        10
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.017554,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 4.757351
+                            }
+                        }
+                    }
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "Ausgrid",
+                    "Name": "Low Voltage (160-750 MWh)",
+                    "State": "NSW",
+                    "Tariff ID": "TCT002",
+                    "Type": "TOU with Demand",
+                    "Year": 2023,
+                    "ProviderType": "Network",
+                    "Parameters": {
+                        "NUOS": {
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.40169,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "TOU": {
+                                "Off Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "22:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.007098,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.007089,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                },
+                                "Summer/Winter Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.05397,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "14:00"
+                                        ],
+                                        "T2": [
+                                            "20:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.010806,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        4,
+                                        5,
+                                        9,
+                                        10
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.010806,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 16.39
+                            }
+                        }
+                    }
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "Ausgrid",
+                    "Name": "Low Voltage (>750 MWh)",
+                    "State": "NSW",
+                    "Tariff ID": "TCT003",
+                    "Type": "TOU with Demand",
+                    "Year": 2023,
+                    "ProviderType": "Network",
+                    "Parameters": {
+                        "NUOS": {
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.434952,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "TOU": {
+                                "Off Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "22:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.007098,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.007089,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                },
+                                "Summer/Winter Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.045138,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "14:00"
+                                        ],
+                                        "T2": [
+                                            "20:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.010806,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        4,
+                                        5,
+                                        9,
+                                        10
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.010806,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 33.024031
+                            }
+                        }
+                    }
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "Ausgrid",
+                    "Name": "High Voltage Connection",
+                    "State": "NSW",
+                    "Tariff ID": "TCT004",
+                    "Type": "TOU with Demand",
+                    "Year": 2023,
+                    "ProviderType": "Network",
+                    "Parameters": {
+                        "NUOS": {
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.21995,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "TOU": {
+                                "Off Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "22:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.011327,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.011327,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                },
+                                "Summer/Winter Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.027127,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "14:00"
+                                        ],
+                                        "T2": [
+                                            "20:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.017255,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        4,
+                                        5,
+                                        9,
+                                        10
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.017255,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 51.300237
+                            }
+                        }
+                    }
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "Ausgrid",
+                    "Name": "Subtransmission Connection",
+                    "State": "NSW",
+                    "Tariff ID": "TCT005",
+                    "Type": "TOU with Demand",
+                    "Year": 2023,
+                    "ProviderType": "Network",
+                    "Parameters": {
+                        "NUOS": {
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.059744,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "TOU": {
+                                "Off Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "22:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.011147,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.011147,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                },
+                                "Summer/Winter Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "14:00",
+                                            "20:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.021695,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        6,
+                                        7,
+                                        8,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "14:00"
+                                        ],
+                                        "T2": [
+                                            "20:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.01694,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off Summer/Winter Shoulder Weekdays": {
+                                    "Month": [
+                                        4,
+                                        5,
+                                        9,
+                                        10
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.01694,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 56.947384
+                            }
+                        }
+                    }
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "Endeavour Energy",
                     "Name": "Low Voltage STOU Transitional",
                     "Parameters": {
                         "NUOS": {
@@ -116,7 +1112,7 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Endeavour",
+                    "Distributor": "Endeavour Energy",
                     "Name": "Low Voltage STOU Demand",
                     "Parameters": {
                         "NUOS": {
@@ -270,7 +1266,7 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Endeavour",
+                    "Distributor": "Endeavour Energy",
                     "Name": "High Voltage STOU Demand",
                     "Parameters": {
                         "NUOS": {
@@ -424,7 +1420,7 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Endeavour",
+                    "Distributor": "Endeavour Energy",
                     "Name": "Subtransmission STOU Demand",
                     "Parameters": {
                         "NUOS": {
@@ -578,7 +1574,7 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Endeavour",
+                    "Distributor": "Endeavour Energy",
                     "Name": "Single Rate General Supply",
                     "Parameters": {
                         "NUOS": {
@@ -602,6 +1598,88 @@
                     },
                     "State": "NSW",
                     "Tariff ID": "TCS001",
+                    "Type": "Single Rate",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "EvoEnergy",
+                    "Name": "General LV Commercial (Capital)",
+                    "Parameters": {
+                        "NUOS": {
+                            "BlockQuarterly": {
+                                "Block1": {
+                                    "Value": 0.1545,
+                                    "Unit": "$/kWh",
+                                    "HighBound": 330
+                                },
+                                "Block2": {
+                                    "Value": 0.20069,
+                                    "Unit": "$/kWh",
+                                    "HighBound": "Infinity"
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 0.70048
+                            }
+                        }
+                    },
+                    "State": "ACT",
+                    "Tariff ID": "TCS009",
+                    "Type": "Single Rate",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "EvoEnergy",
+                    "Name": "General LV Commercial (Non-Capital)",
+                    "Parameters": {
+                        "NUOS": {
+                            "BlockQuarterly": {
+                                "Block1": {
+                                    "Value": 0.1545,
+                                    "Unit": "$/kWh",
+                                    "HighBound": 330
+                                },
+                                "Block2": {
+                                    "Value": 0.20069,
+                                    "Unit": "$/kWh",
+                                    "HighBound": "Infinity"
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 0.61518
+                            }
+                        }
+                    },
+                    "State": "ACT",
+                    "Tariff ID": "TCS010",
+                    "Type": "Single Rate",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "SA Power Networks",
+                    "Name": "Large LV Business Single Rate",
+                    "Parameters": {
+                        "NUOS": {
+                            "FlatRate": {
+                                "Unit": "$/kWh",
+                                "Value": 0.1807
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 0.6164
+                            }
+                        }
+                    },
+                    "State": "SA",
+                    "Tariff ID": "TCS008",
                     "Type": "Single Rate",
                     "Year": 2023,
                     "ProviderType": "Network"
@@ -772,7 +1850,7 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Essential",
+                    "Distributor": "Essential Energy",
                     "Name": "Low Voltage 3 Rate",
                     "Parameters": {
                         "NUOS": {
@@ -1010,7 +2088,7 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Essential",
+                    "Distributor": "Essential Energy",
                     "Name": "Low Voltage Demand Alternative",
                     "Parameters": {
                         "NUOS": {
@@ -1196,7 +2274,7 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Essential",
+                    "Distributor": "Essential Energy",
                     "Name": "High Voltage Monthly Demand",
                     "Parameters": {
                         "NUOS": {
@@ -1740,8 +2818,8 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Citipower",
-                    "Name": "Citipower Low Voltage Transition A",
+                    "Distributor": "CitiPower",
+                    "Name": "CitiPower Low Voltage Transition A",
                     "Parameters": {
                         "NUOS": {
                             "TOU": {
@@ -1880,8 +2958,8 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Citipower",
-                    "Name": "Citipower Low Voltage Transition B",
+                    "Distributor": "CitiPower",
+                    "Name": "CitiPower Low Voltage Transition B",
                     "Parameters": {
                         "NUOS": {
                             "TOU": {
@@ -2020,8 +3098,8 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Citipower",
-                    "Name": "Citipower Low Voltage A",
+                    "Distributor": "CitiPower",
+                    "Name": "CitiPower Low Voltage A",
                     "Parameters": {
                         "NUOS": {
                             "TOU": {
@@ -2160,8 +3238,8 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Citipower",
-                    "Name": "Citipower Low Voltage B",
+                    "Distributor": "CitiPower",
+                    "Name": "CitiPower Low Voltage B",
                     "Parameters": {
                         "NUOS": {
                             "TOU": {
@@ -2300,7 +3378,7 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Citipower",
+                    "Distributor": "CitiPower",
                     "Name": "High Voltage Transition A",
                     "Parameters": {
                         "NUOS": {
@@ -2440,7 +3518,7 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Citipower",
+                    "Distributor": "CitiPower",
                     "Name": "High Voltage Transition B",
                     "Parameters": {
                         "NUOS": {
@@ -2580,8 +3658,8 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Citipower",
-                    "Name": "Citipower High Voltage A",
+                    "Distributor": "CitiPower",
+                    "Name": "CitiPower High Voltage A",
                     "Parameters": {
                         "NUOS": {
                             "TOU": {
@@ -2720,8 +3798,8 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Citipower",
-                    "Name": "Citipower High Voltage B",
+                    "Distributor": "CitiPower",
+                    "Name": "CitiPower High Voltage B",
                     "Parameters": {
                         "NUOS": {
                             "TOU": {
@@ -2860,7 +3938,7 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Citipower",
+                    "Distributor": "CitiPower",
                     "Name": "Subtransmission",
                     "Parameters": {
                         "NUOS": {
@@ -5862,6 +6940,104 @@
                 },
                 {
                     "CustomerType": "Commercial",
+                    "Distributor": "Ausnet Services",
+                    "Name": "Large 2 Rate",
+                    "State": "VIC",
+                    "Tariff ID": "TCT048",
+                    "Type": "TOU with Demand",
+                    "Year": 2023,
+                    "ProviderType": "Network",
+                    "Parameters": {
+                        "NUOS": {
+                            "TOU": {
+                                "Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "23:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.298015,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off Peak Weekdays": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "23:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.084557,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.084557,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 1.229671233
+                            }
+                        }
+                    }
+                },
+                {
+                    "CustomerType": "Commercial",
                     "Distributor": "United Energy",
                     "Name": "Low Voltage Large kW ToU 1",
                     "Parameters": {
@@ -6583,19 +7759,19 @@
                 {
                     "CustomerType": "Commercial",
                     "Distributor": "Energex",
-                    "Name": "Low Voltage Demand",
+                    "Name": "Small Demand",
                     "Parameters": {
                         "NUOS": {
                             "Daily": {
                                 "Unit": "$/Day",
-                                "Value": 5.091
+                                "Value": 5.379
                             },
                             "FlatRate": {
                                 "Unit": "$/kWh",
-                                "Value": 0.01709
+                                "Value": 0.00964
                             },
-                            "Demand TOU": {
-                                "Demand Peak": {
+                            "Demand": {
+                                "Annual Demand": {
                                     "Month": [
                                         1,
                                         2,
@@ -6617,62 +7793,10 @@
                                         ]
                                     },
                                     "Unit": "$/kW/day",
-                                    "Value": 0.445644,
+                                    "Value": 0.482203,
                                     "Weekday": true,
                                     "Weekend": false
-                                },
-                                "Excess Demand": {
-                                    "Unit": "$/kW/day",
-                                    "Value": 0.087255
                                 }
-                            }
-                        }
-                    },
-                    "State": "QLD",
-                    "Tariff ID": "TCD001",
-                    "Type": "Demand",
-                    "Year": 2023,
-                    "ProviderType": "Network"
-                },
-                {
-                    "CustomerType": "Commercial",
-                    "Distributor": "Energex",
-                    "Name": "Small Demand",
-                    "Parameters": {
-                        "NUOS": {
-                            "Demand": {
-                                "Month": [
-                                    1,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    7,
-                                    8,
-                                    9,
-                                    10,
-                                    11,
-                                    12
-                                ],
-                                "TimeIntervals": {
-                                    "T1": [
-                                        "09:00",
-                                        "21:00"
-                                    ]
-                                },
-                                "Unit": "$/kW/day",
-                                "Value": 0.482203,
-                                "Weekday": true,
-                                "Weekend": false
-                            },
-                            "Daily": {
-                                "Unit": "$/Day",
-                                "Value": 5.379
-                            },
-                            "FlatRate": {
-                                "Unit": "$/kWh",
-                                "Value": 0.00964
                             }
                         }
                     },
@@ -6688,32 +7812,6 @@
                     "Name": "Large Demand",
                     "Parameters": {
                         "NUOS": {
-                            "Demand": {
-                                "Month": [
-                                    1,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    7,
-                                    8,
-                                    9,
-                                    10,
-                                    11,
-                                    12
-                                ],
-                                "TimeIntervals": {
-                                    "T1": [
-                                        "09:00",
-                                        "21:00"
-                                    ]
-                                },
-                                "Unit": "$/kW/day",
-                                "Value": 0.454159,
-                                "Weekday": true,
-                                "Weekend": false
-                            },
                             "Daily": {
                                 "Unit": "$/Day",
                                 "Value": 36.077
@@ -6721,6 +7819,34 @@
                             "FlatRate": {
                                 "Unit": "$/kWh",
                                 "Value": 0.00773
+                            },
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "09:00",
+                                            "21:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.454159,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
                             }
                         }
                     },
@@ -7182,6 +8308,634 @@
                 },
                 {
                     "Customer Type": "Commercial",
+                    "Distributor": "TasNetworks",
+                    "Name": "Large Business Low Voltage ToU Demand",
+                    "Parameters": {
+                        "NUOS": {
+                            "Demand TOU": {
+                                "Demand Peak": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "10:00"
+                                        ],
+                                        "T2": [
+                                            "16:00",
+                                            "21:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.43644,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off Peak Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "21:00",
+                                            "16:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.14534,
+                                    "Weekday": true,
+                                    "Weekend": true
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 5.10705
+                            }
+                        }
+                    },
+                    "State": "TAS",
+                    "Tariff ID": "TCT056",
+                    "Type": "Demand Charge",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "EvoEnergy",
+                    "Name": "General LV TOU Commercial (Capital)",
+                    "Parameters": {
+                        "NUOS": {
+                            "TOU": {
+                                "Off Peak Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "22:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.05629,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Peak Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "17:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.22968,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Shoulder Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "17:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.12449,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.05629,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 0.70048
+                            }
+                        }
+                    },
+                    "State": "ACT",
+                    "Tariff ID": "TCT060",
+                    "Type": "TOU",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "EvoEnergy",
+                    "Name": "LV TOU Demand (Capital)",
+                    "Parameters": {
+                        "NUOS": {
+                            "TOU": {
+                                "Off Peak Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "22:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.03304,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Peak Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "17:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.11001,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Shoulder Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "17:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.0607,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.03304,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                }
+                            },
+                            "Demand TOU": {
+                                "Demand Peak Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "17:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.47084,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 1.95518
+                            }
+                        }
+                    },
+                    "State": "ACT",
+                    "Tariff ID": "TCT062",
+                    "Type": "TOU with Demand",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "EvoEnergy",
+                    "Name": "LV TOU Demand (Non-Capital)",
+                    "Parameters": {
+                        "NUOS": {
+                            "TOU": {
+                                "Off Peak Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "22:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.03304,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Peak Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "17:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.11001,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Shoulder Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "17:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.0607,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.03304,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                }
+                            },
+                            "Demand TOU": {
+                                "Demand Peak Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "17:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.47084,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 1.95518
+                            }
+                        }
+                    },
+                    "State": "ACT",
+                    "Tariff ID": "TCT063",
+                    "Type": "TOU with Demand",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "EvoEnergy",
+                    "Name": "General LV TOU Commercial (Non-Capital)",
+                    "Parameters": {
+                        "NUOS": {
+                            "TOU": {
+                                "Off Peak Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "22:00",
+                                            "07:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.05629,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Peak Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "07:00",
+                                            "17:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.22968,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Shoulder Weekday": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "17:00",
+                                            "22:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.12449,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                },
+                                "Off-Peak Weekend": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kWh",
+                                    "Value": 0.05629,
+                                    "Weekday": false,
+                                    "Weekend": true
+                                }
+                            },
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 0.61518
+                            }
+                        }
+                    },
+                    "State": "ACT",
+                    "Tariff ID": "TCT061",
+                    "Type": "TOU",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "Customer Type": "Commercial",
                     "Distributor": "Ergon Energy",
                     "Name": "ToU Demand East",
                     "Parameters": {
@@ -7488,36 +9242,110 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Power and Water Corporation",
+                    "Distributor": "TasNetworks",
+                    "Name": "Large Business Low Voltage kVA Demand",
+                    "Parameters": {
+                        "NUOS": {
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 3.62531
+                            },
+                            "FlatRate": {
+                                "Unit": "$/kWh",
+                                "Value": 0.0234
+                            },
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.33279,
+                                    "Weekday": true,
+                                    "Weekend": true
+                                }
+                            }
+                        }
+                    },
+                    "State": "TAS",
+                    "Tariff ID": "TCD030",
+                    "Type": "Demand Charge",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "EvoEnergy",
+                    "Name": "LV kW Demand",
+                    "Parameters": {
+                        "NUOS": {
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 0.70048
+                            },
+                            "FlatRate": {
+                                "Unit": "$/kWh",
+                                "Value": 0.07327
+                            },
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "00:00",
+                                            "00:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.48635,
+                                    "Weekday": true,
+                                    "Weekend": true
+                                }
+                            }
+                        }
+                    },
+                    "State": "ACT",
+                    "Tariff ID": "TCD031",
+                    "Type": "Demand Charge",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "PowerWater",
                     "Name": "Low Voltage Majors",
                     "Parameters": {
                         "NUOS": {
-                            "Demand": {
-                                "Month": [
-                                    1,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    7,
-                                    8,
-                                    9,
-                                    10,
-                                    11,
-                                    12
-                                ],
-                                "TimeIntervals": {
-                                    "T1": [
-                                        "12:00",
-                                        "21:00"
-                                    ]
-                                },
-                                "Unit": "$/kW",
-                                "Value": 12.3371,
-                                "Weekday": true,
-                                "Weekend": false
-                            },
                             "Daily": {
                                 "Unit": "$/Day",
                                 "Value": 71.2
@@ -7525,6 +9353,34 @@
                             "FlatRate": {
                                 "Unit": "$/kWh",
                                 "Value": 0.01025
+                            },
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "12:00",
+                                            "21:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW",
+                                    "Value": 12.3371,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
                             }
                         }
                     },
@@ -7536,36 +9392,10 @@
                 },
                 {
                     "CustomerType": "Commercial",
-                    "Distributor": "Power and Water Corporation",
+                    "Distributor": "PowerWater",
                     "Name": "High Voltage Majors",
                     "Parameters": {
                         "NUOS": {
-                            "Demand": {
-                                "Month": [
-                                    1,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    7,
-                                    8,
-                                    9,
-                                    10,
-                                    11,
-                                    12
-                                ],
-                                "TimeIntervals": {
-                                    "T1": [
-                                        "12:00",
-                                        "21:00"
-                                    ]
-                                },
-                                "Unit": "$/kW",
-                                "Value": 8.4,
-                                "Weekday": true,
-                                "Weekend": false
-                            },
                             "Daily": {
                                 "Unit": "$/Day",
                                 "Value": 85
@@ -7573,11 +9403,223 @@
                             "FlatRate": {
                                 "Unit": "$/kWh",
                                 "Value": 0.019
+                            },
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "12:00",
+                                            "21:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW",
+                                    "Value": 8.4,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
                             }
                         }
                     },
                     "State": "NT",
                     "Tariff ID": "TCD017",
+                    "Type": "Demand Charge",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "Western Power",
+                    "Name": "High Voltage Metered Demand (300-1000kVA)",
+                    "Parameters": {
+                        "NUOS": {
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 279.37881
+                            },
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "15:00",
+                                            "21:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.6765,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            }
+                        }
+                    },
+                    "State": "WA",
+                    "Tariff ID": "TCD026",
+                    "Type": "Demand Charge",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "Western Power",
+                    "Name": "High Voltage Metered Demand (1000-1500kVA)",
+                    "Parameters": {
+                        "NUOS": {
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 752.98119
+                            },
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "15:00",
+                                            "21:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.32417,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            }
+                        }
+                    },
+                    "State": "WA",
+                    "Tariff ID": "TCD027",
+                    "Type": "Demand Charge",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "Western Power",
+                    "Name": "Low Voltage Metered Demand (300-1000kVA)",
+                    "Parameters": {
+                        "NUOS": {
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 291.05471
+                            },
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "15:00",
+                                            "21:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.74748,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            }
+                        }
+                    },
+                    "State": "WA",
+                    "Tariff ID": "TCD028",
+                    "Type": "Demand Charge",
+                    "Year": 2023,
+                    "ProviderType": "Network"
+                },
+                {
+                    "CustomerType": "Commercial",
+                    "Distributor": "Western Power",
+                    "Name": "Low Voltage Metered Demand (1000-1500kVA)",
+                    "Parameters": {
+                        "NUOS": {
+                            "Daily": {
+                                "Unit": "$/Day",
+                                "Value": 814.28983
+                            },
+                            "Demand": {
+                                "Annual Demand": {
+                                    "Month": [
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12
+                                    ],
+                                    "TimeIntervals": {
+                                        "T1": [
+                                            "15:00",
+                                            "21:00"
+                                        ]
+                                    },
+                                    "Unit": "$/kW/day",
+                                    "Value": 0.3899,
+                                    "Weekday": true,
+                                    "Weekend": false
+                                }
+                            }
+                        }
+                    },
+                    "State": "WA",
+                    "Tariff ID": "TCD029",
                     "Type": "Demand Charge",
                     "Year": 2023,
                     "ProviderType": "Network"

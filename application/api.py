@@ -11,6 +11,7 @@ import math
 from shapely.geometry import Point, shape
 
 from werkzeug.utils import secure_filename
+from ast import literal_eval
 
 app = Flask(__name__)
 CORS(app)
@@ -325,10 +326,8 @@ def upload_file():
 
 
 
-def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders):
-    pv_panel_group = [(0, 0, 0), (2, 0, 0), (2, -1.415, 1.415), (0, -1.415, 1.415)]
-    shading_boxes = [{'points': [(0, 0), (2, 0), (2, 2), (0, 2)], 'height': 2}]
-    shading_cylinders = []
+def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders,
+                                               max_grid_space=0.30, buffer_from_edge=0.30):
     """
     Generates a shading array for a pv panel group by determining the fraction of the pv panel group that
     will be shaded by the boxes and cylinders at a set zenith and azimuth angles in 5 degree increments range from 0-90
@@ -336,23 +335,30 @@ def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders):
     south-north, with the north direction being positive, the x-axis runs west-east with the east direction being
     positive, and the z-axis runs down-up, with the up direction being positive. All distance values are metres.
 
+    Note:
+
+    To improve the runtime of this function it is assumed that all shading objects start at or below the level of the
+    lowest part of the PV panel group, and shading objects don't have 'over hangs'. This allows the shading algorithm
+    to stop checking azimuth angles if they are not shaded at a greater zenith angle.
+
     Examples:
-        >>> panel_group = [(0, 0, 0), (2, 0, 0), (2, -1.415, 1.415), (0, -1.415, 1.415)]
-        >>> boxes = [{'points': [(0, 0), (2, 0), (2, 2), (0, 2)], 'height': 2}]
-        >>> cylinders = []
-        >>> shading_array = generate_shading_arrays_for_pv_panel_group(panel_group, boxes, cylinders)
 
-        >>> shading_array['s0'][:10]
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    >>> panel_group = [(0, 0, 0), (2, 0, 0), (2, -1.415, 1.415), (0, -1.415, 1.415)]
+    >>> boxes = [{'points': [(0, 0), (2, 0), (2, 2), (0, 2)], 'height': 2}]
+    >>> cylinders = []
+    >>> shading_array = generate_shading_arrays_for_pv_panel_group(panel_group, boxes, cylinders)
 
-        >>> len(shading_array['s0'])
-        72
+    >>> shading_array['s0'][:10]
+    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
-        >>> len(shading_array.keys())
-        91
+    >>> len(shading_array['s0'])
+    72
 
-        >>> list(shading_array.keys())[:10]
-        ['s0', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9']
+    >>> len(shading_array.keys())
+    91
+
+    >>> list(shading_array.keys())[:10]
+    ['s0', 's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9']
 
 
     Args:
@@ -380,13 +386,17 @@ def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders):
         [{'s0': [0.0, 0.0, ... 0.0],  's1': [0.0, 0.0, ... 0.0], ... 's90': [0.0, 0.0, ... 0.0]},
          {'s0': [0.0, 0.0, ... 0.0],  's1': [0.0, 0.0, ... 0.0], ... 's90': [0.0, 0.0, ... 0.0]}]
     """
-    points = generate_grid_of_points_on_panel_group(pv_panel_group, max_grid_space=0.30, buffer_from_edge=0.30,
-                                                    precision=3)
+    pv_panel_group = literal_eval(pv_panel_group)
+    shading_boxes = json.loads(shading_boxes)
+    shading_cylinders = json.loads(shading_cylinders)
+
+    points = generate_grid_of_points_on_panel_group(pv_panel_group, max_grid_space=max_grid_space,
+                                                    buffer_from_edge=buffer_from_edge, precision=3)
     box_sides = generate_box_sides(shading_boxes)
     shading_arrays = generate_shading_arrays_for_points(points, box_sides, shading_cylinders)
     shading_array = aggregate_shading_arrays(shading_arrays)
     shading_array = format_shading_array(shading_array)
-    return jsonify(shading_array)
+    return shading_array
 
 
 def generate_grid_of_points_on_panel_group(panel_group, max_grid_space, buffer_from_edge, precision=3):
@@ -394,6 +404,8 @@ def generate_grid_of_points_on_panel_group(panel_group, max_grid_space, buffer_f
     Generate a set of points in 3D space in a grid on the panel group, the grid spacing is determined such that the
     minimum number of points are used while keeping the spacing below max_grid_space. The grid starts within
     the panel group at the distance buffer_from_edge.
+
+    This function was written with assistance from ChatGPT4.
 
     Examples:
 
@@ -496,11 +508,11 @@ def generate_box_sides(shading_boxes):
 def compose_box_side_definition(box, point_1, point_2):
     side_points = [box['points'][point_1], box['points'][point_2]]
     side_vector_normal = calculate_vector_normal(
-        box['points'][point_1] + (0,),
-        box['points'][point_2] + (0,),
-        box['points'][point_1] + (box['height'],)
+        tuple(box['points'][point_1]) + (0,),
+        tuple(box['points'][point_2]) + (0,),
+        tuple(box['points'][point_1]) + (box['height'],)
     )
-    return {'points':side_points, 'height': box['height'], 'vector_normal': side_vector_normal}
+    return {'points': side_points, 'height': box['height'], 'vector_normal': side_vector_normal}
 
 
 def calculate_vector_normal(p1, p2, p3):
@@ -547,17 +559,13 @@ def generate_shading_arrays_for_points(points, shading_sides_boxes, shading_cyli
         shading_cylinders: list[dict] a list of dictionaries. Each dictionary defines a 3D Cylinder that could shade the
             point. Each is cylinder is described by a centre point, a radius, and a height value. An example cylinder
             dictionary is {'centre': (0,0), 'radius': 1, 'height': 3]}. All values are in metres.
-        angles: list[tuple] a set of altitude and azimuth angles from the point to check if the sun were at this angle
-            would the point be shaded. First value in the tuple is altitude, second is azimuth.
 
-    Returns: list[dict{list}] Each dictionary in the list is a shading array. The keys in the dictionary are
-        's0', 's1' . . . 's90' where the number after 's' is the zenith angle for the values in the corresponding list.
-        Each list in the dictionary has 72 values, which correspond to 72 azimuth angles in 5 degree increments, i.e.
-        azimuth angles from 0 to 355 degrees. Each value in the list is a float between zero and one that specifies the
-        fraction of the panel group that will be shaded if the sun was at the corresponding angle. An example list for
-        two panel groups would look like
-        [{'s0': [0.0, 0.0, ... 0.0],  's1': [0.0, 0.0, ... 0.0], ... 's90': [0.0, 0.0, ... 0.0]},
-         {'s0': [0.0, 0.0, ... 0.0],  's1': [0.0, 0.0, ... 0.0], ... 's90': [0.0, 0.0, ... 0.0]}]
+    Returns: list[pd.DataFrame] where each pd.DataFrame specifies the shading of one point on the surface of the PV
+        panel group. Each pd.DataFrame has the columns azimuth, zenith, and shaded. azimuth and zenith
+        are the angles of a line to check the shading for in degrees. shaded is a boolean value specifying if the line
+        on that angle hits a shading object. The angles checked are all the combinations of the 72 azimuth angles
+        starting at 0 through to 355 in 5 degree increments, and 91 zenith angles starting a 0 through to 90, in 1
+        degree increments.
     """
     angle_vectors = generate_vectors_of_angles_in_shading_array_format()
     shading_arrays = []
@@ -572,51 +580,94 @@ def generate_vectors_of_angles_in_shading_array_format():
     Create a dictionary in the shading array format where the values are tuples specify the direction of the angle
     as an x, y, z vector.
 
+    This function was written with assistance from ChatGPT4.
+
     Example:
 
     >>> generate_vectors_of_angles_in_shading_array_format()
 
-    Returns: dict{list[tuple]} The keys in the dictionary are
-        's0', 's1' . . . 's90' where the number after 's' is the zenith angle for the values in the corresponding list.
-        Each list in the dictionary has 72 values, which correspond to 72 azimuth angles in 5 degree increments, i.e.
-        azimuth angles from 0 to 355 degrees. Each value in the list is a tuple that specifies the x, y, z components of
-        a line at the corresponding zenith and azimuth angle. An example dictionary would look like
-        {'s0': [(0.0, 1.0, 1.0), (0.08715574274765817, 0.9961946980917455, 1.0), ...],
-         's1': [(0.0, 1.0, 0.9998476951563913), (0.08715574274765817, 0.9961946980917455, 0.9998476951563913), ...],
-         ...
-         's90': [(0.0, 1.0, 6.123233995736766e-17), (0.08715574274765817, 0.9961946980917455, 6.123233995736766e-17), ...]}
+    Returns: pd.DataFrame with the columns azimuth, zenith, zenith_search_group, and vector. The azimuth and zenith
+        angles are all the combinations of the 72 azimuth angles starting at 0 through to 355 in 5 degree increments,
+        and 91 zenith angles starting a 0 through to 90, in 1 degree increments. The zenith_search_group search group is
+        the decade of the zenith angle (i.e. 9 for 90, 8 for 83 etc.), this is used to group the angles to check the
+        shading in batches. The vector is the 3D vector specifying the direction of line this is used later when
+        checking where a line traveling at the given angle intercepts other objects in 3D space.
 
     """
 
     data_rows = []
-    for zenith in range(0, 91, 1):
+    for zenith in range(0, 91, 5):
+        zenith_radians = math.radians(zenith)
+        zenith_search_group = zenith // 10
         for azimuth in range(0, 360, 5):
-            x = math.sin(math.radians(azimuth))
-            y = math.cos(math.radians(azimuth))
-            z = math.cos(math.radians(zenith))
-            data_rows.append((azimuth, zenith, (x, y, z)))
+            azimuth_radians = math.radians(azimuth)
+            x = math.sin(zenith_radians) * math.sin(azimuth_radians)
+            y = math.sin(zenith_radians) * math.cos(azimuth_radians)
+            z = math.cos(zenith_radians)
+            data_rows.append((azimuth, zenith, zenith_search_group, (x, y, z)))
 
-    angles_and_vectors = pd.DataFrame(data_rows, columns=['azimuth', 'zenith', 'vector'])
+    angles_and_vectors = pd.DataFrame(data_rows, columns=['azimuth', 'zenith', 'zenith_search_group', 'vector'])
 
     return angles_and_vectors
 
 
 def aggregate_shading_arrays(shading_arrays):
+    """
+    Takes a list of shading arrays for a set of points in 3D space and aggregates them by finding the fraction of the
+    points that are shaded at each angle.
+
+    Args:
+        shading_arrays:
+            list[pd.DataFrame] where each pd.DataFrame specifies the shading of one point on the surface of
+            the PV panel group. Each pd.DataFrame has the columns azimuth, zenith, and shaded. azimuth and zenith
+            are the angles of a line to check the shading for in degrees. shaded is a boolean value specifying if the line
+            on that angle hits a shading object. The angles checked are all the combinations of the 72 azimuth angles
+            starting at 0 through to 355 in 5 degree increments, and 91 zenith angles starting a 0 through to 90, in 1
+            degree increments.
+
+    Returns:
+        pd.DataFrame with the columns azimuth, zenith, and shaded. The azimuth and zenith angles are all the
+        combinations of the 72 azimuth angles starting at 0 through to 355 in 5 degree increments,
+        and 91 zenith angles starting a 0 through to 90, in 1 degree increments. shaded is the fraction of points that
+        are shaded at the given angle.
+
+    """
+    number_of_points = len(shading_arrays)
     shading_arrays = pd.concat(shading_arrays)
     shading_arrays = shading_arrays.loc[:, ['azimuth', 'zenith', 'shaded']]
     shading_arrays['shaded'] = np.where(shading_arrays['shaded'], 1, 0)
     shading_array = shading_arrays.groupby(['azimuth', 'zenith'], as_index=False)['shaded'].sum()
-    shading_array['shaded'] = np.where(shading_array['shaded'] >= 1, 1, 0)
+    shading_array['shaded'] = shading_array['shaded'] / number_of_points
     return shading_array
 
 
 def format_shading_array(shading_array):
-    re_formated_array = {}
+    """
+    Changes the format of the shading array from a data frame to a dictionary.
+
+    Args:
+        shading_array:
+            pd.DataFrame with the columns azimuth, zenith, and shaded. The azimuth and zenith angles are all the
+            combinations of the 72 azimuth angles starting at 0 through to 355 in 5 degree increments,
+            and 91 zenith angles starting a 0 through to 90, in 1 degree increments. shaded is the fraction of points
+            that  are shaded at the given angle.
+
+    Returns: dict{list} The keys in the dictionary are 's0', 's1' . . . 's90' where the number after 's' is the zenith
+        angle for the values in the corresponding list. Each list in the dictionary has 72 values, which correspond to
+        72 azimuth angles in 5 degree increments, i.e. azimuth angles from 0 to 355 degrees. Each value in the list is
+        a float between zero and one that specifies the fraction of the panel group that will be shaded if the sun was
+        at the corresponding angle. An example list for two panel groups would look like
+        [{'s0': [0.0, 0.0, ... 0.0],  's1': [0.0, 0.0, ... 0.0], ... 's90': [0.0, 0.0, ... 0.0]},
+         {'s0': [0.0, 0.0, ... 0.0],  's1': [0.0, 0.0, ... 0.0], ... 's90': [0.0, 0.0, ... 0.0]}]
+    """
+    re_formatted_array = {}
     zenith_groups = shading_array.groupby(['zenith'], as_index=False)
     for group, data in zenith_groups:
+        if type(group) == tuple:
+            group = group[0]
         data = data.sort_values('azimuth')
-        re_formated_array['s' + str(group)] = list(data['shaded'])
-    return re_formated_array
+        re_formatted_array['s' + str(group)] = list(data['shaded'])
+    return re_formatted_array
 
 
 def generate_shading_array_for_point(point, shading_boxes_sides, shading_cylinders, angles):
@@ -631,22 +682,74 @@ def generate_shading_array_for_point(point, shading_boxes_sides, shading_cylinde
         point: tuple(int) the x, y, z co-ordinates of the point. All values are in metres.
         shading_boxes_sides: list[dict] list of side definitions. Each side is defined using two x,y points, the height
             of the box, and the pre-computed vector normal of the plane the side sits on. An example dictionary would be
-            {'points': [(0,0), (0,1)], 'height': 3, 'vector_normal': (0, 1, 0)]}
+            {'points': [(0,0), (0,1)], 'height': 3, 'vector_normal': (0, 1, 0)}
         shading_cylinders: list[dict] a list of dictionaries. Each dictionary defines a 3D Cylinder that could shade the
             point. Each is cylinder is described by a centre point, a radius, and a height value. An example cylinder
-            dictionary is {'centre': (0,0), 'radius': 1, 'height': 3]}. All values are in metres.
-        angles: list[tuple] a set of altitude and azimuth angles from the point to check if the sun were at this angle
-            would the point be shaded. First value in the tuple is altitude, second is azimuth.
+            dictionary is {'centre': (0,0), 'radius': 1, 'height': 3}. All values are in metres.
+        angles: pd.DataFrame with the columns azimuth, zenith, zenith_search_group, and vector. The azimuth and zenith
+            angles are all the combinations of the 72 azimuth angles starting at 0 through to 355 in 5 degree
+            increments, and 91 zenith angles starting a 0 through to 90, in 1 degree increments. The zenith_search_group
+            search group is the decade of the zenith angle (i.e. 9 for 90, 8 for 83 etc.), this is used to group the
+            angles to check the shading in batches. The vector is the 3D vector specifying the direction of line this
+            is used later when checking where a line traveling at the given angle intercepts other objects in 3D space.
 
-    Returns: list[int] of length angles, a 0 value indicates the point would not be shaded, and 1 value indicates the
-        point would be shaded.
+    Returns: pd.DataFrame with the columns azimuth, zenith, and shaded. The azimuth and zenith angles are all the
+        combinations of the 72 azimuth angles starting at 0 through to 355 in 5 degree increments,
+        and 91 zenith angles starting a 0 through to 90, in 1 degree increments. The shaded column specifies if a
+        line at the given angle intercepts one of the shading objects.
     """
-    angles['shaded'] = angles.apply(
-        lambda x: check_if_angle_shaded(point, x['vector'], shading_boxes_sides, shading_cylinders), axis=1)
+    # Grouping is based on the tens digit of the azimuth, so 90 is group 9, and 83 is group 8 etc. This means if we
+    # sort by descending we will check just everything at the horizontal first, and then check angles in batches
+    # of 10 degree increments.
+    angles = angles.sort_values('zenith_search_group', ascending=False)
+    azimuths_to_keep_checking = None
+    shading_results = []
+    for zenith_search_group, angle_set in angles.groupby('zenith_search_group', as_index=False, sort=False):
+        # Only check azimuth angles if they were shaded at zenith angle closer to the horizontal. This greatly
+        # improves the efficiency of the shading calculation.
+        if azimuths_to_keep_checking is not None:
+            angle_set = angle_set[angle_set['azimuth'].isin(azimuths_to_keep_checking)].copy()
+        # If no azimuth angles in the last set were shaded we can stop looking for angles that shaded.
+        if angle_set.empty:
+            break
+        # Check the shading of the angles we need to check.
+        angle_set['shaded'] = angle_set.apply(
+            lambda x: check_if_angle_shaded(point, x['vector'], shading_boxes_sides, shading_cylinders), axis=1)
+        # Find the azimuth angles that were shaded in the last set (only considering the minimum zenith angle in the
+        # last set)
+        min_angle_in_group = angle_set['zenith'].min()
+        azimuths_to_keep_checking = \
+            angle_set[(angle_set['shaded']) & (angle_set['zenith'] == min_angle_in_group)]['azimuth']
+        shading_results.append(angle_set)
+
+    shading_results = pd.concat(shading_results)
+
+    # Combine results with original full set of angles, assume not shaded for any angles the search algorithm didn't
+    # check.
+    angles = pd.merge(angles, shading_results.loc[:, ['zenith', 'azimuth', 'shaded']], how='left',
+                      on=['azimuth', 'zenith'])
+    angles = angles.fillna(False)
+
     return angles
 
 
 def check_if_angle_shaded(point, vector, shading_boxes_sides, shading_cylinders):
+    """
+    Checks if the line defined by the point and the vector intercepts with any of the specified shading objects. Note,
+    checks that intercept occurs in the positive direction of the line.
+
+    Args:
+        point: tuple(float) the x, y, z co-ordinates of the point. All values are in metres.
+        vector: tuple(float) the direction of the line specified by its vector components in the x, y, z directions
+        shading_boxes_sides: list[dict] list of side definitions. Each side is defined using two x,y points, the height
+            of the box, and the pre-computed vector normal of the plane the side sits on. An example dictionary would be
+            {'points': [(0,0), (0,1)], 'height': 3, 'vector_normal': (0, 1, 0)}
+        shading_cylinders: list[dict] a list of dictionaries. Each dictionary defines a 3D Cylinder that could shade the
+            point. Each is cylinder is described by a centre point, a radius, and a height value. An example cylinder
+            dictionary is {'centre': (0,0), 'radius': 1, 'height': 3}. All values are in metres.
+
+    Returns: boolean value specify if the line intercepts a shading object.
+    """
     line = {'point': point, 'vector': vector}
     for side in shading_boxes_sides:
         if check_if_line_goes_through_box_side(line, side):
@@ -678,19 +781,24 @@ def check_if_line_goes_through_box_side(line, side):
 
     Returns: Boolean
     """
-    plane = {'point': side['points'][0] + (side['height'],), 'vector_normal': side['vector_normal']}
+    plane = {'point': tuple(side['points'][0]) + (side['height'],), 'vector_normal': side['vector_normal']}
     intercept = find_line_intercept_with_plane(line, plane)
     if intercept == 'parallel':
         return False
     elif intercept == 'coincident':
         return True
     else:
-        return check_if_intercept_point_within_bounds_of_side(intercept, side)
+        if check_if_point_of_intercept_is_in_positive_direction_of_vector(line, intercept):
+            return check_if_intercept_point_within_bounds_of_side(intercept, side)
+        else:
+            return False
 
 
 def find_line_intercept_with_plane(line, plane):
     """
     Finds where a line in 3D space intercepts a plane in 3D space.
+
+    This function was written with assistance from ChatGPT4.
 
     If the line is coincident with the plane the string 'coincident' is returned, if the line is parallel to the plane ]
     the string 'parallel' is returned, if line intercepts the plane at a point the (x, y, z) value is returned.
@@ -761,6 +869,7 @@ def find_line_intercept_with_plane(line, plane):
     Returns: str or tuple e.g. 'coincident', 'parallel', or (x, y, z)
     """
 
+    #t0 = time()
     # Unpack inputs into variable values used in documentation
     # Point on line
     x0 = line['point'][0]
@@ -778,23 +887,30 @@ def find_line_intercept_with_plane(line, plane):
     A = plane['vector_normal'][0]
     B = plane['vector_normal'][1]
     C = plane['vector_normal'][2]
+    #times['unpacking'] += time() - t0
 
-    solution_numerator = (A*(x1 - x0) + B*(y1 - y0) + C*(z1 - z0))
-    solution_denominator = (A*a + B*b + C*c)
+    #t0 = time()
+    solution_numerator = (A * (x1 - x0) + B * (y1 - y0) + C * (z1 - z0))
+    solution_denominator = (A * a + B * b + C * c)
+    #times['solution_numerator and solution_denominator'] += time() - t0
 
+    #t0 = time()
     # Check if line is coincident or parallel to plane.
     if solution_denominator == 0:
         # Check if line is coincident to plane.
-        if A*(x0 - x1) + B*(y0 - y1) + C*(z0 - z1) == 0:
+        if A * (x0 - x1) + B * (y0 - y1) + C * (z0 - z1) == 0:
             return 'coincident'
         else:
             return 'parallel'
+    #times['parallel checks'] += time() - t0
 
+    #t0 = time()
     t = solution_numerator / solution_denominator
 
     x = x0 + a * t
     y = y0 + b * t
     z = z0 + c * t
+    #times['compute point'] += time() - t0
 
     return x, y, z
 
@@ -860,61 +976,130 @@ def check_if_intercept_point_within_bounds_of_side(point, side):
     xI2x1 = abs(xI - x1)
     x02x1 = abs(x0 - x1)
 
-    if xI2x0 <= x02x1 and xI2x1 <= x02x1:
-        x_value_within_side = True
-    else:
-        x_value_within_side = False
-
     # y-axis distance between points.
     yI2y0 = abs(yI - y0)
     yI2y1 = abs(yI - y1)
     y02y1 = abs(y0 - y1)
 
-    if yI2y0 <= y02y1 and yI2y1 <= y02y1:
-        y_value_within_side = True
+    # We only need to check x or y values, however, when x0 and x1 or y0 and y1 are very close we can run into
+    # precision errors, therefore, we check using whichever axis has the greatest distance between points.
+    if x02x1 > y02y1:
+        if xI2x0 <= x02x1 and xI2x1 <= x02x1:
+            xy_values_within_side = True
+        else:
+            xy_values_within_side = False
     else:
-        y_value_within_side = False
+        if yI2y0 <= y02y1 and yI2y1 <= y02y1:
+            xy_values_within_side = True
+        else:
+            xy_values_within_side = False
 
     if side['height'] >= zI >= 0:
         z_value_within_side = True
     else:
         z_value_within_side = False
 
-    return x_value_within_side and y_value_within_side and z_value_within_side
+    return xy_values_within_side and z_value_within_side
 
 
 def check_if_line_intercepts_cylinder(line, cylinder):
+    """"
+    Checks if a line intercepts a cylinder. Note: also checks if the intercept is in the positive direction of travel
+    of the line.
+
+    This function was written with assistance from ChatGPT4.
+
+    Args:
+        line: dict{tuple} A line defined using a point and vector. The dictionary would be
+            {'point': (x, y, z), 'vector':(a, b, c)}. Where x, y, z are the co-ordinates of a point that the line
+            passes through. and a, b, and c are the components of the vector in the x, y, z direction. So an example
+            line that passes through the origin and heads directly north at altitude of 45 degrees would be
+            {'point': (0, 0, 0), 'vector':(0, 1, 1)}
+        cylinder: dict that defines a 3D Cylinder that could shade the point. The cylinder is described by a
+            centre point, a radius, and a height value. An example cylinder dictionary is
+            {'centre': (0,0), 'radius': 1, 'height': 3}. All values are in metres.
+
+    """
     # define variables for convenience
-    x0, y0, z0 = line['points']
+    x0, y0, z0 = line['point']
     a, b, c = line['vector']
     h, k = cylinder['centre']
 
     # Coefficients for the quadratic equation At^2 + Bt + C = 0
-    A = a**2 + b**2
-    B = 2*a*(x0 - h) + 2*b*(y0 - k)
-    C = (x0 - h)**2 + (y0 - k)**2 - cylinder['radius']**2
+    A = a ** 2 + b ** 2
+    B = 2 * a * (x0 - h) + 2 * b * (y0 - k)
+    C = (x0 - h) ** 2 + (y0 - k) ** 2 - cylinder['radius'] ** 2
 
     # Compute the discriminant
-    discriminant = B**2 - 4*A*C
+    discriminant = B ** 2 - 4 * A * C
 
     if discriminant < 0:
         # If discriminant is less than 0, the line does not intersect the cylinder.
         return False
     else:
         # Otherwise, solve for t
-        t1 = (-B - np.sqrt(discriminant)) / (2*A)
-        t2 = (-B + np.sqrt(discriminant)) / (2*A)
+        t1 = (-B - np.sqrt(discriminant)) / (2 * A)
+        t2 = (-B + np.sqrt(discriminant)) / (2 * A)
 
         # Check the z-coordinates of the intersection points
+        x1 = x0 + t1 * a
+        x2 = x0 + t2 * a
+        y1 = y0 + t1 * b
+        y2 = y0 + t2 * b
         z1 = z0 + t1 * c
         z2 = z0 + t2 * c
+
+        intercept_1 = (x1, y1, z1)
+        intercept_2 = (x2, y2, z2)
 
         z_min = 0
         z_max = cylinder['height']
 
-        if (z_min <= z1 <= z_max) or (z_min <= z2 <= z_max):
-            # If either z1 or z2 is within the cylinder height limits, return True
-            return True
+        if check_if_point_of_intercept_is_in_positive_direction_of_vector(line, intercept_1):
+            if z_min <= z1 <= z_max:
+                return True
+
+        if check_if_point_of_intercept_is_in_positive_direction_of_vector(line, intercept_2):
+            if z_min <= z2 <= z_max:
+                return True
 
     # If none of the conditions are met, return False
     return False
+
+
+def check_if_point_of_intercept_is_in_positive_direction_of_vector(line, point):
+    """
+    Checks if the intercept point is in the positive direction of travel for the line.
+
+    This function was written with assistance from ChatGPT4.
+
+    Args:
+        line: dict{tuple} A line defined using a point and vector. The dictionary would be
+            {'point': (x, y, z), 'vector':(a, b, c)}. Where x, y, z are the co-ordinates of a point that the line
+            passes through. and a, b, and c are the components of the vector in the x, y, z direction. So an example
+            line that passes through the origin and heads directly north at altitude of 45 degrees would be
+            {'point': (0, 0, 0), 'vector':(0, 1, 1)}
+        point: tuple(float) The intercept point.
+    """
+    # Calculate vector components from the point defining the line to intercept point.
+    v1x = point[0] - line['point'][0]
+    v1y = point[1] - line['point'][1]
+    v1z = point[2] - line['point'][2]
+
+    # Check the direction of each component of v1 is the same as the line vector.
+    if line['vector'][0] != 0:
+        check_x = (v1x / line['vector'][0]) >= 0
+    else:
+        check_x = True
+
+    if line['vector'][1] != 0:
+        check_y = (v1y / line['vector'][1]) >= 0
+    else:
+        check_y = True
+
+    if line['vector'][2] != 0:
+        check_z = (v1z / line['vector'][2]) >= 0
+    else:
+        check_z = True
+
+    return check_x and check_y and check_z

@@ -175,7 +175,7 @@ def find_dnsp(lat, long):
             break
     if (found_dnsp):
         dnsp_name = s_list[dnsp_index].properties.get("network")
-    if dnsp_name == 'Actewagl':
+    if dnsp_name in ['Actewagl', 'Evoenergy']:
         dnsp_name = 'EvoEnergy'
     if dnsp_name == '':
         dnsp_name = 'Off-grid'

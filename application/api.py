@@ -666,7 +666,7 @@ def format_shading_array(shading_array):
         if type(group) == tuple:
             group = group[0]
         data = data.sort_values('azimuth')
-        re_formatted_array['s' + str(group)] = list(data['shaded'])
+        re_formatted_array['s' + str(group)] = list(data['shaded'].astype('str'))
     return re_formatted_array
 
 

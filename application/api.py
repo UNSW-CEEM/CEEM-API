@@ -9,6 +9,7 @@ import numpy as np
 import geojson
 import math
 from shapely.geometry import Point, shape
+import geopandas as gpd
 
 from werkzeug.utils import secure_filename
 from ast import literal_eval
@@ -181,6 +182,29 @@ def find_dnsp(lat, long):
         dnsp_name = 'Off-grid'
     return jsonify(dnsp_name)
 
+#  https://ceem-api.herokuapp.com/lga/-32/150
+@app.route('/lga/<lat>/<long>')
+def find_lga(lat, long):
+    path_to_file = os.path.join('shapefiles', 'LGA_2023_AUST_GDA2020.shp')
+    shdf = gpd.read_file(path_to_file)
+    
+    p = Point([float(long), float(lat)])
+    
+    found_lga = False
+    lga_name = ''
+
+    for i in range(shdf.shape[0]):
+        g = shdf.iloc[i,:].geometry
+        if(g is not None and shape(g).contains(p)):
+            found_lga = True
+            lga_index = i
+            break
+    if(found_lga):
+        lga = shdf.iloc[lga_index,:]
+        lga_name = lga.lga_name
+    
+    return jsonify(lga_name)
+
  # Finding the AER benchmarking (based on the AER Bnechmarking for energy consumptions)
 #  https://ceem-api.herokuapp.com/AERBenchmarking/2010
 @app.route('/AERBenchmarking/<postcode>')
@@ -320,11 +344,6 @@ def upload_file():
 
 # Calculates the shading array. For documentation and examples, please refer to shading_calculator.py
 @app.route('/calculate_shading/<pv_panel_group>/<shading_boxes>/<shading_cylinders>')
-# def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders):
-#     shading_array = shading_calculator.generate_shading_arrays_for_pv_panel_group(pv_panel_group, shading_boxes, shading_cylinders)
-#     return jsonify(shading_array)
-
-
 
 def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders,
                                                max_grid_space=0.30, buffer_from_edge=0.30):

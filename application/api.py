@@ -9,6 +9,7 @@ import numpy as np
 import geojson
 import math
 from shapely.geometry import Point, shape
+import geopandas as gpd
 
 from werkzeug.utils import secure_filename
 from ast import literal_eval
@@ -180,6 +181,36 @@ def find_dnsp(lat, long):
     if dnsp_name == '':
         dnsp_name = 'Off-grid'
     return jsonify(dnsp_name)
+
+#  https://ceem-api.herokuapp.com/lga/nsw/-32/150
+@app.route('/lga/<state>/<lat>/<long>')
+def find_lga(state, lat, long):
+    state_abr = state.strip().upper()
+    states = ['NSW', 'ACT', 'VIC', 'QLD', 'SA', 'WA', 'NT', 'TAS', 'OT']
+    if state_abr not in states:
+        return "Unknown LGA due to unknown state:" + state
+    
+    path_to_file = os.path.join('shapefiles','LGA_2023_AUST_GDA2020_' + state_abr + '.shp')
+    shdf = gpd.read_file(path_to_file)
+   
+    p = Point([float(long), float(lat)])
+    
+    found_lga = False
+    lga_name = ''
+    state_name = ''
+    lga_index = -1
+
+    for i in range(shdf.shape[0]):
+        g = shdf.iloc[i,:].geometry
+        if(g is not None and shape(g).contains(p)):
+            found_lga = True
+            lga_index = i
+            break
+    if(found_lga):
+        lga = shdf.iloc[lga_index,:]
+        lga_name = lga.lga_name
+    
+    return jsonify(lga_name)
 
  # Finding the AER benchmarking (based on the AER Bnechmarking for energy consumptions)
 #  https://ceem-api.herokuapp.com/AERBenchmarking/2010

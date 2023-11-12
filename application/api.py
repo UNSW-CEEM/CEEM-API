@@ -603,9 +603,12 @@ def generate_shading_arrays_for_points(points, shading_sides_boxes, shading_cyli
     """
     angle_vectors = generate_vectors_of_angles_in_shading_array_format()
     shading_arrays = []
-    for point in points:
-        shading_arrays.append(generate_shading_array_for_point(point, shading_sides_boxes, shading_cylinders,
-                                                               angle_vectors.copy()))
+    with ProcessPoolExecutor(max_workers=7) as executor:
+        futures = [executor.submit(generate_shading_array_for_point, point, shading_sides_boxes, shading_cylinders, angle_vectors.copy()) for point in points]
+
+    for future in concurrent.futures.as_completed(futures):
+        shading_arrays.append(future.result())
+
     return shading_arrays
 
 

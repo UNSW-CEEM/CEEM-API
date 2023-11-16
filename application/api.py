@@ -354,11 +354,6 @@ def upload_file():
 
 # Calculates the shading array. For documentation and examples, please refer to shading_calculator.py
 @app.route('/calculate_shading/<pv_panel_group>/<shading_boxes>/<shading_cylinders>')
-# def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders):
-#     shading_array = shading_calculator.generate_shading_arrays_for_pv_panel_group(pv_panel_group, shading_boxes, shading_cylinders)
-#     return jsonify(shading_array)
-
-
 
 def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders,
                                                max_grid_space=0.30, buffer_from_edge=0.30):
@@ -420,6 +415,7 @@ def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders,
         [{'s0': [0.0, 0.0, ... 0.0],  's1': [0.0, 0.0, ... 0.0], ... 's90': [0.0, 0.0, ... 0.0]},
          {'s0': [0.0, 0.0, ... 0.0],  's1': [0.0, 0.0, ... 0.0], ... 's90': [0.0, 0.0, ... 0.0]}]
     """
+
     pv_panel_group = literal_eval(pv_panel_group)
     shading_boxes = json.loads(shading_boxes)
     shading_cylinders = json.loads(shading_cylinders)
@@ -430,6 +426,7 @@ def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders,
     shading_arrays = generate_shading_arrays_for_points(points, box_sides, shading_cylinders)
     shading_array = aggregate_shading_arrays(shading_arrays)
     shading_array = format_shading_array(shading_array)
+
     return shading_array
 
 
@@ -603,11 +600,14 @@ def generate_shading_arrays_for_points(points, shading_sides_boxes, shading_cyli
     """
     angle_vectors = generate_vectors_of_angles_in_shading_array_format()
     shading_arrays = []
-    with ProcessPoolExecutor(max_workers=7) as executor:
-        futures = [executor.submit(generate_shading_array_for_point, point, shading_sides_boxes, shading_cylinders, angle_vectors.copy()) for point in points]
+    for point in points:
+        shading_arrays.append(generate_shading_array_for_point(point, shading_sides_boxes, shading_cylinders,
+                                                               angle_vectors.copy()))
+    # with ProcessPoolExecutor(max_workers=5) as executor:
+    #     futures = [executor.submit(generate_shading_array_for_point, point, shading_sides_boxes, shading_cylinders, angle_vectors.copy()) for point in points]
 
-    for future in concurrent.futures.as_completed(futures):
-        shading_arrays.append(future.result())
+    # for future in concurrent.futures.as_completed(futures):
+    #     shading_arrays.append(future.result())
 
     return shading_arrays
 
@@ -635,15 +635,14 @@ def generate_vectors_of_angles_in_shading_array_format():
     data_rows = []
     for zenith in range(0, 91, 5):
         zenith_radians = math.radians(zenith)
-        zenith_search_group = zenith // 10
         for azimuth in range(0, 360, 5):
             azimuth_radians = math.radians(azimuth)
             x = math.sin(zenith_radians) * math.sin(azimuth_radians)
             y = math.sin(zenith_radians) * math.cos(azimuth_radians)
             z = math.cos(zenith_radians)
-            data_rows.append((azimuth, zenith, zenith_search_group, (x, y, z)))
+            data_rows.append((azimuth, zenith, x, y, z))
 
-    angles_and_vectors = pd.DataFrame(data_rows, columns=['azimuth', 'zenith', 'zenith_search_group', 'vector'])
+    angles_and_vectors = pd.DataFrame(data_rows, columns=['azimuth', 'zenith', 'a', 'b', 'c'])
 
     return angles_and_vectors
 
@@ -723,117 +722,69 @@ def generate_shading_array_for_point(point, shading_boxes_sides, shading_cylinde
         shading_cylinders: list[dict] a list of dictionaries. Each dictionary defines a 3D Cylinder that could shade the
             point. Each is cylinder is described by a centre point, a radius, and a height value. An example cylinder
             dictionary is {'centre': (0,0), 'radius': 1, 'height': 3}. All values are in metres.
-        angles: pd.DataFrame with the columns azimuth, zenith, zenith_search_group, and vector. The azimuth and zenith
-            angles are all the combinations of the 72 azimuth angles starting at 0 through to 355 in 5 degree
-            increments, and 91 zenith angles starting a 0 through to 90, in 1 degree increments. The zenith_search_group
-            search group is the decade of the zenith angle (i.e. 9 for 90, 8 for 83 etc.), this is used to group the
-            angles to check the shading in batches. The vector is the 3D vector specifying the direction of line this
-            is used later when checking where a line traveling at the given angle intercepts other objects in 3D space.
+        angles: pd.DataFrame with  a, b, and c which are the x, y, and z components of the 3D vectors specifying the
+            direction of lines, this is used later when checking where a line traveling at the given angle intercepts
+            other objects in 3D space.
 
-    Returns: pd.DataFrame with the columns azimuth, zenith, and shaded. The azimuth and zenith angles are all the
-        combinations of the 72 azimuth angles starting at 0 through to 355 in 5 degree increments,
-        and 91 zenith angles starting a 0 through to 90, in 1 degree increments. The shaded column specifies if a
-        line at the given angle intercepts one of the shading objects.
+    Returns: pd.DataFrame with an extra column 'shaded'. The shaded column specifies if a line at the given angle
+        intercepts one of the shading objects.
     """
-    # Grouping is based on the tens digit of the azimuth, so 90 is group 9, and 83 is group 8 etc. This means if we
-    # sort by descending we will check just everything at the horizontal first, and then check angles in batches
-    # of 10 degree increments.
-    angles = angles.sort_values('zenith_search_group', ascending=False)
-    azimuths_to_keep_checking = None
     shading_results = []
-    for zenith_search_group, angle_set in angles.groupby('zenith_search_group', as_index=False, sort=False):
-        # Only check azimuth angles if they were shaded at zenith angle closer to the horizontal. This greatly
-        # improves the efficiency of the shading calculation.
-        if azimuths_to_keep_checking is not None:
-            angle_set = angle_set[angle_set['azimuth'].isin(azimuths_to_keep_checking)].copy()
-        # If no azimuth angles in the last set were shaded we can stop looking for angles that shaded.
-        if angle_set.empty:
-            break
-        # Check the shading of the angles we need to check.
-        angle_set['shaded'] = angle_set.apply(
-            lambda x: check_if_angle_shaded(point, x['vector'], shading_boxes_sides, shading_cylinders), axis=1)
-        # Find the azimuth angles that were shaded in the last set (only considering the minimum zenith angle in the
-        # last set)
-        min_angle_in_group = angle_set['zenith'].min()
-        azimuths_to_keep_checking = \
-            angle_set[(angle_set['shaded']) & (angle_set['zenith'] == min_angle_in_group)]['azimuth']
-        shading_results.append(angle_set)
-
-    shading_results = pd.concat(shading_results)
-
-    # Combine results with original full set of angles, assume not shaded for any angles the search algorithm didn't
-    # check.
-    angles = pd.merge(angles, shading_results.loc[:, ['zenith', 'azimuth', 'shaded']], how='left',
-                      on=['azimuth', 'zenith'])
-    angles = angles.fillna(False)
-
+    for side in shading_boxes_sides:
+        shading_results.append(
+            check_if_line_goes_through_box_side(point, angles, side)
+        )
+    for cylinder in shading_cylinders:
+        shading_results.append(
+            check_if_line_intercepts_cylinder(point, angles, cylinder)
+        )
+    angles['shaded'] = np.logical_or.reduce(shading_results)
     return angles
 
 
-def check_if_angle_shaded(point, vector, shading_boxes_sides, shading_cylinders):
+def check_if_line_goes_through_box_side(point, vectors, side):
     """
-    Checks if the line defined by the point and the vector intercepts with any of the specified shading objects. Note,
-    checks that intercept occurs in the positive direction of the line.
-
-    Args:
-        point: tuple(float) the x, y, z co-ordinates of the point. All values are in metres.
-        vector: tuple(float) the direction of the line specified by its vector components in the x, y, z directions
-        shading_boxes_sides: list[dict] list of side definitions. Each side is defined using two x,y points, the height
-            of the box, and the pre-computed vector normal of the plane the side sits on. An example dictionary would be
-            {'points': [(0,0), (0,1)], 'height': 3, 'vector_normal': (0, 1, 0)}
-        shading_cylinders: list[dict] a list of dictionaries. Each dictionary defines a 3D Cylinder that could shade the
-            point. Each is cylinder is described by a centre point, a radius, and a height value. An example cylinder
-            dictionary is {'centre': (0,0), 'radius': 1, 'height': 3}. All values are in metres.
-
-    Returns: boolean value specify if the line intercepts a shading object.
-    """
-    line = {'point': point, 'vector': vector}
-    for side in shading_boxes_sides:
-        if check_if_line_goes_through_box_side(line, side):
-            return True
-    for cylinder in shading_cylinders:
-        if check_if_line_intercepts_cylinder(line, cylinder):
-            return True
-    else:
-        return False
-
-
-def check_if_line_goes_through_box_side(line, side):
-    """
-    Check if a line goes through the side of box. By first checking if the line goes through the plane that the side
-    of the box sits on. If its does, finding the point that the line intersects the plane. Lastly checking if that
-    point is within the bounds of that defined the edges of the side of the box.
+    Check if a set of lines originating at the same point but at different angles go through the side of a box. By first
+    checking if the lines go through the plane that the side of the box sits on. If they do, finding the point that the
+    line intersects the plane. Lastly checking if that point is within the bounds of that defined the edges of the side
+    of the box.
 
     Examples:
 
     Args:
-        line: dict{tuple} A line defined using a point and vector. The dictionary would be
-            {'point': (x, y, z), 'vector':(a, b, c)}. Where x, y, z are the co-ordinates of a point that the line
-            passes through. and a, b, and c are the components of the vector in the x, y, z direction. So an example
-            line that passes through the origin and heads directly north at altitude of 45 degrees would be
-            {'point': (0, 0, 0), 'vector':(0, 1, 1)}
+        point: tuple(int) the x, y, z co-ordinates of the point. All values are in metres.
+        vectors: pd.DataFrame with  a, b, and c which are the x, y, and z components of the 3D vectors specifying the
+            direction of lines, this is used later when checking where a line traveling at the given angle intercepts
+            other objects in 3D space.
         side: dict{} definition of side using two x,y points, the height of the box, and the pre-computed vector normal
             of the plane the side sits on. An example dictionary would be
             {'points': [(0,0), (0,1)], 'height': 3, 'vector_normal': (0, 1, 0)]}
 
     Returns: Boolean
     """
+    result = np.full(len(vectors), False)
+
     plane = {'point': tuple(side['points'][0]) + (side['height'],), 'vector_normal': side['vector_normal']}
-    intercept = find_line_intercept_with_plane(line, plane)
-    if intercept == 'parallel':
-        return False
-    elif intercept == 'coincident':
-        return True
-    else:
-        if check_if_point_of_intercept_is_in_positive_direction_of_vector(line, intercept):
-            return check_if_intercept_point_within_bounds_of_side(intercept, side)
-        else:
-            return False
+    vectors = vectors['a'].to_numpy(), vectors['b'].to_numpy(), vectors['c'].to_numpy()
+    intercepts, vectors_of_intercepting_lines, coincident_or_not, intersecting_lines_mask = (
+        find_line_intercept_with_plane(point, plane, vectors))
+    in_pos_direction = check_if_point_of_intercept_is_in_positive_direction_of_vector(
+        intercepts, point, vectors_of_intercepting_lines)
+    intercept_in_side_bounds = check_if_intercept_point_within_bounds_of_side(intercepts, side)
+    intercepts_box_side_in_pos_direction = in_pos_direction & intercept_in_side_bounds
+
+    # For all the lines that intersect the plane of the side somewhere use the intercept results.
+    result[intersecting_lines_mask] = intercepts_box_side_in_pos_direction
+    # For all the line that don't intersect the plane give shaded result if coincident and not shaded if parallel.
+    result[~intersecting_lines_mask] = coincident_or_not
+
+    return result
 
 
-def find_line_intercept_with_plane(line, plane):
+
+def find_line_intercept_with_plane(point, plane, vectors):
     """
-    Finds where a line in 3D space intercepts a plane in 3D space.
+    Finds where a set lines in 3D space intercept a plane in 3D space.
 
     This function was written with assistance from ChatGPT4.
 
@@ -870,52 +821,73 @@ def find_line_intercept_with_plane(line, plane):
     Examples:
 
     Define a line that one metre down the y-axis and goes straight up, and a plane that runs along the x and z axis.
-    Then attempt to compute the intercept, the results should be 'parallel'.
+    Then attempt to compute the intercept, the results should indicate that the line does not intercept the plane
+    and is not coincident to the plane.
 
-    >>> line0 = {'point': (0, 1, 0), 'vector': (0, 0, 1)}
+    >>> point0 = (0, 1, 0)
+
+    >>> vectors = (np.array([0]), np.array([0]), np.array([1]))
 
     >>> plane0 = {'point': (0, 0, 0), 'vector_normal': (0, 1, 0)}
 
-    >>> find_line_intercept_with_plane(line0, plane0)
-    'parallel'
+    >>> intercepts, vectors_of_intercepting_lines, coincident_or_not, intersecting_lines_mask = \
+    find_line_intercept_with_plane(plane0, point0, vectors)
+
+    >>> intercepts
+    (array([], dtype=float64), array([], dtype=float64), array([], dtype=float64))
+
+    >>> coincident_or_not
+    array([False])
 
     Now change the line to go through the origin, the result should be 'coincident'.
 
-    >>> line0 = {'point': (0, 0, 0), 'vector': (0, 0, 1)}
+    >>> point0 = (0, 0, 0)
 
-    >>> find_line_intercept_with_plane(line0, plane0)
-    'coincident'
+    >>> intercepts, vectors_of_intercepting_lines, coincident_or_not, intersecting_lines_mask = \
+    find_line_intercept_with_plane(plane0, point0, vectors)
 
-    Now change the line back to the first starting point, but slow it back towards the plane at 45 degrees. The
+    >>> coincident_or_not
+    array([ True])
+
+    Now change the line back to the first starting point, but slope it back towards the plane at 45 degrees. The
     result should be an intercept 1 metre above the origin.
 
-    >>> line0 = {'point': (0, 1, 0), 'vector': (0, -1, 1)}
+    >>> point0 = (0, 1, 0)
 
-    >>> find_line_intercept_with_plane(line0, plane0)
-    (0.0, 0.0, 1.0)
+    >>> vectors = (np.array([0]), np.array([-1]), np.array([1]))
+
+    >>> intercepts, vectors_of_intercepting_lines, coincident_or_not, intersecting_lines_mask = \
+    find_line_intercept_with_plane(plane0, point0, vectors)
+
+    >>> intercepts
+    (array([0.]), array([0.]), array([1.]))
 
     Args:
-        line: dict{tuple} A line defined using a point and vector. The dictionary would be
-            {'point': (x, y, z), 'vector':(a, b, c)}. Where x, y, z are the co-ordinates of a point that the line
-            passes through. and a, b, and c are the components of the vector in the x, y, z direction. So an example
-            line that passes through the origin and heads directly north at altitude of 45 degrees would be
-            {'point': (0, 0, 0), 'vector':(0, 1, 1)}
+        point: tuple(int) the x, y, z co-ordinates of the point which all the lines pass through. All values are in
+        metres.
+        vectors: tuple(np.array) the x, y, and z components of the vectors which define the lines being tested.
         plane: dict{} definition of plane using an x,y,z point and the vector normal of the plane. An example dictionary
             would be {'point': (0, 0, 3), 'vector_normal': (0, 1, 0)]}
-
-    Returns: str or tuple e.g. 'coincident', 'parallel', or (x, y, z)
+    Returns:
+        x: np.array the x intercepts of lines that pass through the plane
+        y: np.array the y intercepts of lines that pass through the plane
+        z: np.array the z intercepts of lines that pass through the plane
+        a: np.array the x components of the vectors for lines that pass through the plane
+        b: np.array the x components of the vectors for lines that pass through the plane
+        c: np.array the x components of the vectors for lines that pass through the plane
+        coincident_or_not: np.array of boolens, if a line is coincident to the plane if it doesn't intercept the place.
+            False values mean that the line is paralled rather than coincident.
+        intersecting_lines_mask: np.array of booleans, for each line tested specifies whether it intercepts the line
+        or not. Used later to recombined results for lines that intercepted the plane and lines that were paralllel
+        of coincident.
     """
-
-    #t0 = time()
     # Unpack inputs into variable values used in documentation
+    # Vectors of line
+    a = vectors[0]
+    b = vectors[1]
+    c = vectors[2]
     # Point on line
-    x0 = line['point'][0]
-    y0 = line['point'][1]
-    z0 = line['point'][2]
-    # Vector of line
-    a = line['vector'][0]
-    b = line['vector'][1]
-    c = line['vector'][2]
+    x0, y0, z0 = point
     # Point on plane
     x1 = plane['point'][0]
     y1 = plane['point'][1]
@@ -924,37 +896,43 @@ def find_line_intercept_with_plane(line, plane):
     A = plane['vector_normal'][0]
     B = plane['vector_normal'][1]
     C = plane['vector_normal'][2]
-    #times['unpacking'] += time() - t0
 
-    #t0 = time()
     solution_numerator = (A * (x1 - x0) + B * (y1 - y0) + C * (z1 - z0))
     solution_denominator = (A * a + B * b + C * c)
-    #times['solution_numerator and solution_denominator'] += time() - t0
+    coincident_check = A * (x0 - x1) + B * (y0 - y1) + C * (z0 - z1)
 
-    #t0 = time()
-    # Check if line is coincident or parallel to plane.
-    if solution_denominator == 0:
-        # Check if line is coincident to plane.
-        if A * (x0 - x1) + B * (y0 - y1) + C * (z0 - z1) == 0:
-            return 'coincident'
-        else:
-            return 'parallel'
-    #times['parallel checks'] += time() - t0
+    intersecting_lines_mask = solution_denominator != 0
 
-    #t0 = time()
+    # Check if line is coincident or parallel to plane. We interpret coincident as shaded.
+    if coincident_check == 0:
+        coincident_or_not = True
+    else:
+        coincident_or_not = False
+
+    coincident_or_not = np.full(len(solution_denominator[~intersecting_lines_mask]), coincident_or_not)
+
+    solution_denominator = solution_denominator[intersecting_lines_mask]
+    a = a[intersecting_lines_mask]
+    b = b[intersecting_lines_mask]
+    c = c[intersecting_lines_mask]
+
     t = solution_numerator / solution_denominator
 
     x = x0 + a * t
     y = y0 + b * t
     z = z0 + c * t
-    #times['compute point'] += time() - t0
 
-    return x, y, z
+    intercepts = (x, y, z)
+    vectors_of_intercepting_lines = (a, b, c)
+
+    return intercepts, vectors_of_intercepting_lines, coincident_or_not, intersecting_lines_mask
 
 
-def check_if_intercept_point_within_bounds_of_side(point, side):
+
+def check_if_intercept_point_within_bounds_of_side(intercepts, side):
     """
-    Check if a point in 3D space is within the bounds of the side of a box. Assumes the side of the box is vertical.
+    Check if a set points in 3D space are within the bounds of the side of a box. Assumes the side of the box is
+    vertical.
 
     Maths behind function:
 
@@ -973,73 +951,66 @@ def check_if_intercept_point_within_bounds_of_side(point, side):
     Example where point is within side.
 
     >>> side_1 = {'points': [(0, 10), (10, 0)], 'height': 3}
-    >>> point_1 = (5, 5, 2)
+    >>> point_1 = (np.array([5]), np.array([5]), np.array([2]))
     >>> check_if_intercept_point_within_bounds_of_side(point_1, side_1)
-    True
+    array([ True])
 
     Example where point is too high
 
-    >>> point_2 = (5, 5, 3.1)
+    >>> point_2 = (np.array([5]), np.array([5]), np.array([3.1]))
     >>> check_if_intercept_point_within_bounds_of_side(point_2, side_1)
-    False
+    array([False])
 
     Example where point is outside the side because it's too far in the x direction
 
-    >>> point_3 = (11, -1, 2)
+    >>> point_3 = (np.array([11]), np.array([-1]), np.array([2]))
     >>> check_if_intercept_point_within_bounds_of_side(point_3, side_1)
-    False
+    array([False])
 
     Example where point is outside the side because it's not far enough in the x direction
 
-    >>> point_4 = (-1, 11, 2)
+    >>> point_4 = (np.array([-1]), np.array([11]), np.array([2]))
     >>> check_if_intercept_point_within_bounds_of_side(point_4, side_1)
-    False
+    array([False])
 
     Args:
-        point: tuple the x, y, co-ordinates of the point.
+        intercepts: tuple(np.array) the x, y, z, co-ordinates of the points.
         side: dict{} definition of side using two x,y points, and the height of the box. An example dictionary would be
             {'points': [(0,0), (0,1)], 'height': 3]}
     """
-    xI = point[0]
-    yI = point[1]
-    zI = point[2]
+    xI = intercepts[0]
+    yI = intercepts[1]
+    zI = intercepts[2]
+
     x0 = side['points'][0][0]
     y0 = side['points'][0][1]
     x1 = side['points'][1][0]
     y1 = side['points'][1][1]
 
     # x-axis distance between points.
-    xI2x0 = abs(xI - x0)
-    xI2x1 = abs(xI - x1)
-    x02x1 = abs(x0 - x1)
+    xI2x0 = np.absolute((xI - x0))
+    xI2x1 = np.absolute((xI - x1))
+    x02x1 = np.absolute((x0 - x1))
 
     # y-axis distance between points.
-    yI2y0 = abs(yI - y0)
-    yI2y1 = abs(yI - y1)
-    y02y1 = abs(y0 - y1)
+    yI2y0 = np.absolute((yI - y0))
+    yI2y1 = np.absolute((yI - y1))
+    y02y1 = np.absolute((y0 - y1))
 
     # We only need to check x or y values, however, when x0 and x1 or y0 and y1 are very close we can run into
     # precision errors, therefore, we check using whichever axis has the greatest distance between points.
-    if x02x1 > y02y1:
-        if xI2x0 <= x02x1 and xI2x1 <= x02x1:
-            xy_values_within_side = True
-        else:
-            xy_values_within_side = False
-    else:
-        if yI2y0 <= y02y1 and yI2y1 <= y02y1:
-            xy_values_within_side = True
-        else:
-            xy_values_within_side = False
+    xy_values_within_side = np.where(
+        x02x1 > y02y1,
+        (xI2x0 <= x02x1) & (xI2x1 <= x02x1),
+        (yI2y0 <= y02y1) & (yI2y1 <= y02y1)
+    )
 
-    if side['height'] >= zI >= 0:
-        z_value_within_side = True
-    else:
-        z_value_within_side = False
+    z_value_within_side = (side['height'] >= zI) & (zI >= 0)
 
-    return xy_values_within_side and z_value_within_side
+    return xy_values_within_side & z_value_within_side
 
 
-def check_if_line_intercepts_cylinder(line, cylinder):
+def check_if_line_intercepts_cylinder(point, vectors, cylinder):
     """"
     Checks if a line intercepts a cylinder. Note: also checks if the intercept is in the positive direction of travel
     of the line.
@@ -1047,20 +1018,22 @@ def check_if_line_intercepts_cylinder(line, cylinder):
     This function was written with assistance from ChatGPT4.
 
     Args:
-        line: dict{tuple} A line defined using a point and vector. The dictionary would be
-            {'point': (x, y, z), 'vector':(a, b, c)}. Where x, y, z are the co-ordinates of a point that the line
-            passes through. and a, b, and c are the components of the vector in the x, y, z direction. So an example
-            line that passes through the origin and heads directly north at altitude of 45 degrees would be
-            {'point': (0, 0, 0), 'vector':(0, 1, 1)}
+        point: tuple(int) the x, y, z co-ordinates of the point which all the lines pass through. All values are in
+        metres.
+        vectors: tuple(np.array) the x, y, and z components of the vectors which define the lines being tested.
         cylinder: dict that defines a 3D Cylinder that could shade the point. The cylinder is described by a
             centre point, a radius, and a height value. An example cylinder dictionary is
             {'centre': (0,0), 'radius': 1, 'height': 3}. All values are in metres.
 
     """
+    # Save number of lines being tested
+    num_lines = len(vectors)
+
     # define variables for convenience
-    x0, y0, z0 = line['point']
-    a, b, c = line['vector']
+    x0, y0, z0 = point
     h, k = cylinder['centre']
+
+    a, b, c = vectors['a'].to_numpy(), vectors['b'].to_numpy(), vectors['c'].to_numpy()
 
     # Coefficients for the quadratic equation At^2 + Bt + C = 0
     A = a ** 2 + b ** 2
@@ -1070,73 +1043,79 @@ def check_if_line_intercepts_cylinder(line, cylinder):
     # Compute the discriminant
     discriminant = B ** 2 - 4 * A * C
 
-    if discriminant < 0:
-        # If discriminant is less than 0, the line does not intersect the cylinder.
-        return False
-    else:
-        # Otherwise, solve for t
-        t1 = (-B - np.sqrt(discriminant)) / (2 * A)
-        t2 = (-B + np.sqrt(discriminant)) / (2 * A)
+    # If discriminant is less than or equal to 0, the line does not intersect the cylinder.
+    mask = discriminant <= 0
+    discriminant_no_intersect_lines = discriminant[mask]
+    discriminant_intersect_lines = discriminant[~mask]
+    a = a[~mask]
+    b = b[~mask]
+    c = c[~mask]
+    A = A[~mask]
+    B = B[~mask]
 
-        # Check the z-coordinates of the intersection points
-        x1 = x0 + t1 * a
-        x2 = x0 + t2 * a
-        y1 = y0 + t1 * b
-        y2 = y0 + t2 * b
-        z1 = z0 + t1 * c
-        z2 = z0 + t2 * c
+    # Otherwise, solve for t
+    t1 = (-B - np.sqrt(discriminant_intersect_lines)) / (2 * A)
+    t2 = (-B + np.sqrt(discriminant_intersect_lines)) / (2 * A)
 
-        intercept_1 = (x1, y1, z1)
-        intercept_2 = (x2, y2, z2)
+    # Check the z-coordinates of the intersection points
+    x1 = x0 + t1 * a
+    x2 = x0 + t2 * a
+    y1 = y0 + t1 * b
+    y2 = y0 + t2 * b
+    z1 = z0 + t1 * c
+    z2 = z0 + t2 * c
 
-        z_min = 0
-        z_max = cylinder['height']
+    z_min = 0
+    z_max = cylinder['height']
 
-        if check_if_point_of_intercept_is_in_positive_direction_of_vector(line, intercept_1):
-            if z_min <= z1 <= z_max:
-                return True
+    vectors = (a, b, c)
+    intercepts1 = (x1, y1, z1)
+    intercept_1_in_pos = check_if_point_of_intercept_is_in_positive_direction_of_vector(intercepts1, point, vectors)
+    intercepts2 = (x2, y2, z2)
+    intercept_2_in_pos = check_if_point_of_intercept_is_in_positive_direction_of_vector(intercepts2, point, vectors)
 
-        if check_if_point_of_intercept_is_in_positive_direction_of_vector(line, intercept_2):
-            if z_min <= z2 <= z_max:
-                return True
+    result_discriminant_intersect_lines = np.where(
+        intercept_1_in_pos & ((z_min <= z1) & (z1 <= z_max)) |
+        intercept_2_in_pos & ((z_min <= z2) & (z2 <= z_max)), True, False)
 
-    # If none of the conditions are met, return False
-    return False
+    result = np.full(num_lines, False)
+    result[~mask] = result_discriminant_intersect_lines
+
+    return result
 
 
-def check_if_point_of_intercept_is_in_positive_direction_of_vector(line, point):
+def check_if_point_of_intercept_is_in_positive_direction_of_vector(intercepts, point, vectors):
     """
     Checks if the intercept point is in the positive direction of travel for the line.
 
     This function was written with assistance from ChatGPT4.
 
     Args:
-        line: dict{tuple} A line defined using a point and vector. The dictionary would be
-            {'point': (x, y, z), 'vector':(a, b, c)}. Where x, y, z are the co-ordinates of a point that the line
-            passes through. and a, b, and c are the components of the vector in the x, y, z direction. So an example
-            line that passes through the origin and heads directly north at altitude of 45 degrees would be
-            {'point': (0, 0, 0), 'vector':(0, 1, 1)}
-        point: tuple(float) The intercept point.
+        intercepts: tuple(np.array) the x, y, z, co-ordinates of the points where the lines intercept.
+        point: tuple(int) the x, y, z co-ordinates of the point which all the lines pass through. All values are in
+        metres.
+        vectors: tuple(np.array) the x, y, and z components of the vectors which define the lines being tested.
     """
+    x = intercepts[0]
+    y = intercepts[1]
+    z = intercepts[2]
+
+    x0 = point[0]
+    y0 = point[1]
+    z0 = point[2]
+
+    a = vectors[0]
+    b = vectors[1]
+    c = vectors[2]
+
     # Calculate vector components from the point defining the line to intercept point.
-    v1x = point[0] - line['point'][0]
-    v1y = point[1] - line['point'][1]
-    v1z = point[2] - line['point'][2]
+    v1x = x - x0
+    v1y = y - y0
+    v1z = z - z0
 
     # Check the direction of each component of v1 is the same as the line vector.
-    if line['vector'][0] != 0:
-        check_x = (v1x / line['vector'][0]) >= 0
-    else:
-        check_x = True
+    check_x = v1x * a >= 0
+    check_y = v1y * b >= 0
+    check_z = v1z * c >= 0
 
-    if line['vector'][1] != 0:
-        check_y = (v1y / line['vector'][1]) >= 0
-    else:
-        check_y = True
-
-    if line['vector'][2] != 0:
-        check_z = (v1z / line['vector'][2]) >= 0
-    else:
-        check_z = True
-
-    return check_x and check_y and check_z
+    return np.where(check_x & check_y & check_z, True, False)

@@ -14,6 +14,7 @@ geojson = "*"
 geopandas = "*"
 shapely = "*"
 requests = "*"
+sentry_sdk = "*"
 
 [dev-packages]
 

@@ -16,6 +16,13 @@ from ast import literal_eval
 
 import concurrent.futures
 from concurrent.futures import ProcessPoolExecutor
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn="https://838c660a60d6c6f963e11b9f03c3e12c@o4505112837160960.ingest.sentry.io/4506357516075008",
+    traces_sample_rate=1.0,
+    profiles_sample_rate=1.0,
+)
 
 app = Flask(__name__)
 CORS(app)
@@ -415,20 +422,37 @@ def calculate_shading(pv_panel_group, shading_boxes, shading_cylinders,
         [{'s0': [0.0, 0.0, ... 0.0],  's1': [0.0, 0.0, ... 0.0], ... 's90': [0.0, 0.0, ... 0.0]},
          {'s0': [0.0, 0.0, ... 0.0],  's1': [0.0, 0.0, ... 0.0], ... 's90': [0.0, 0.0, ... 0.0]}]
     """
+    input_pv_panel_group = pv_panel_group
+    input_shading_boxes = shading_boxes
+    input_shading_cylinders = shading_cylinders
 
-    pv_panel_group = literal_eval(pv_panel_group)
-    shading_boxes = json.loads(shading_boxes)
-    shading_cylinders = json.loads(shading_cylinders)
+    try:
+        pv_panel_group = literal_eval(pv_panel_group)
+        shading_boxes = json.loads(shading_boxes)
+        shading_cylinders = json.loads(shading_cylinders)
 
-    points = generate_grid_of_points_on_panel_group(pv_panel_group, max_grid_space=max_grid_space,
-                                                    buffer_from_edge=buffer_from_edge, precision=3)
-    box_sides = generate_box_sides(shading_boxes)
-    shading_arrays = generate_shading_arrays_for_points(points, box_sides, shading_cylinders)
-    shading_array = aggregate_shading_arrays(shading_arrays)
-    shading_array = format_shading_array(shading_array)
+        points = generate_grid_of_points_on_panel_group(pv_panel_group, max_grid_space=max_grid_space,
+                                                        buffer_from_edge=buffer_from_edge, precision=3)
+        box_sides = generate_box_sides(shading_boxes)
+        shading_arrays = generate_shading_arrays_for_points(points, box_sides, shading_cylinders)
+        shading_array = aggregate_shading_arrays(shading_arrays)
+        shading_array = format_shading_array(shading_array)
 
-    return shading_array
+        response = shading_array
 
+    except Exception as e:
+        sentry_sdk.set_context("input_pv_panel_group", {"value": input_pv_panel_group})
+        sentry_sdk.set_context("input_shading_boxes", {"value": input_shading_boxes})
+        sentry_sdk.set_context("input_shading_cylinders", {"value": input_shading_cylinders})
+        sentry_sdk.capture_exception(e)
+        error_data = {'Error': str(e)}
+        response = app.response_class(
+            response=json.dumps(error_data, default=str),
+            status=500,
+            mimetype='application/json'
+        )
+
+    return response
 
 def generate_grid_of_points_on_panel_group(panel_group, max_grid_space, buffer_from_edge, precision=3):
     """

@@ -28,6 +28,251 @@
                 "Year": 2022
             },
             {
+                "CustomerType": "SmallBusiness",
+                "Date_accessed": "2022-08",
+                "Distributor": "Off-grid",
+                "Name": "Single Rate (Off-grid) SmallBusiness",
+                "Parameters": {
+                    "Daily": {
+                        "Unit": "$/day",
+                        "Value": 1.1876
+                    },
+                    "FiT": {
+                        "Unit": "$/kWh",
+                        "Value": 0
+                    },
+                    "FlatRate": {
+                        "Unit": "$/kWh",
+                        "Value": 0.3011
+                    }
+                },
+                "Provider": "Offgrid",
+                "ProviderType": "Retailer",
+                "State": "All",
+                "Tariff ID": "TR0002_offgrid",
+                "Type": "Single_Rate",
+                "Year": 2022
+            },
+            {
+                "CustomerType": "SmallBusiness",
+                "Date_accessed": "2023-08",
+                "Distributor": "Off-grid",
+                "Name": "Time of Use (Off-grid) SmallBusiness",
+                "Parameters": {
+                    "Daily": {
+                        "Unit": "$/day",
+                        "Value": 1.5
+                    },
+                    "FiT": {
+                        "Unit": "$/kWh",
+                        "Value": 0.0884
+                    },
+                    "TOU": {
+                        "Off Peak Weekday": {
+                            "Month": [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5,
+                                6,
+                                7,
+                                8,
+                                9,
+                                10,
+                                11,
+                                12
+                            ],
+                            "TimeIntervals": {
+                                "T1": [
+                                    "22:00",
+                                    "07:00"
+                                ]
+                            },
+                            "Unit": "$/kWh",
+                            "Value": 0.18,
+                            "Weekday": true,
+                            "Weekend": true
+                        },
+                        "Peak Weekday": {
+                            "Month": [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5,
+                                6,
+                                7,
+                                8,
+                                9,
+                                10,
+                                11,
+                                12
+                            ],
+                            "TimeIntervals": {
+                                "T1": [
+                                    "07:00",
+                                    "09:00"
+                                ],
+                                "T2": [
+                                    "17:00",
+                                    "20:00"
+                                ]
+                            },
+                            "Unit": "$/kWh",
+                            "Value": 0.4,
+                            "Weekday": true,
+                            "Weekend": true
+                        },
+                        "Shoulder Weekday": {
+                            "Month": [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5,
+                                6,
+                                7,
+                                8,
+                                9,
+                                10,
+                                11,
+                                12
+                            ],
+                            "TimeIntervals": {
+                                "T1": [
+                                    "09:00",
+                                    "17:00"
+                                ],
+                                "T2": [
+                                    "20:00",
+                                    "22:00"
+                                ]
+                            },
+                            "Unit": "$/kWh",
+                            "Value": 0.25,
+                            "Weekday": true,
+                            "Weekend": true
+                        }
+                    }
+                },
+                "Provider": "Offgrid",
+                "ProviderType": "Retailer",
+                "State": "All",
+                "Tariff ID": "TR0003_offgrid",
+                "Type": "TOU",
+                "Year": 2023
+            },{
+                "CustomerType": "Residential",
+                "Date_accessed": "2023-08",
+                "Distributor": "Off-grid",
+                "Name": "Time of Use (Off-grid) Residential",
+                "Parameters": {
+                    "Daily": {
+                        "Unit": "$/day",
+                        "Value": 1.5
+                    },
+                    "FiT": {
+                        "Unit": "$/kWh",
+                        "Value": 0.0884
+                    },
+                    "TOU": {
+                        "Off Peak Weekday": {
+                            "Month": [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5,
+                                6,
+                                7,
+                                8,
+                                9,
+                                10,
+                                11,
+                                12
+                            ],
+                            "TimeIntervals": {
+                                "T1": [
+                                    "22:00",
+                                    "07:00"
+                                ]
+                            },
+                            "Unit": "$/kWh",
+                            "Value": 0.18,
+                            "Weekday": true,
+                            "Weekend": true
+                        },
+                        "Peak Weekday": {
+                            "Month": [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5,
+                                6,
+                                7,
+                                8,
+                                9,
+                                10,
+                                11,
+                                12
+                            ],
+                            "TimeIntervals": {
+                                "T1": [
+                                    "07:00",
+                                    "09:00"
+                                ],
+                                "T2": [
+                                    "17:00",
+                                    "20:00"
+                                ]
+                            },
+                            "Unit": "$/kWh",
+                            "Value": 0.4,
+                            "Weekday": true,
+                            "Weekend": true
+                        },
+                        "Shoulder Weekday": {
+                            "Month": [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5,
+                                6,
+                                7,
+                                8,
+                                9,
+                                10,
+                                11,
+                                12
+                            ],
+                            "TimeIntervals": {
+                                "T1": [
+                                    "09:00",
+                                    "17:00"
+                                ],
+                                "T2": [
+                                    "20:00",
+                                    "22:00"
+                                ]
+                            },
+                            "Unit": "$/kWh",
+                            "Value": 0.25,
+                            "Weekday": true,
+                            "Weekend": true
+                        }
+                    }
+                },
+                "Provider": "Offgrid",
+                "ProviderType": "Retailer",
+                "State": "All",
+                "Tariff ID": "TR0004_offgrid",
+                "Type": "TOU",
+                "Year": 2023
+            },
+            {
                 "CustomerType": "Residential",
                 "Date_accessed": "2023-08",
                 "Distributor": "EvoEnergy",
@@ -7930,11 +8175,11 @@
                             "Weekday": true,
                             "Weekend": false
                         }
-                    }
+                    },
+                    "State": "VIC",
+                    "Type": "Feed in Tariff",
+                    "Year": 2023
                 },
-                "State": "VIC",
-                "Type": "Feed in Tariff",
-                "Year": 2023,
                 "Tariff ID": "FiT_Structure_11",
                 "ProviderType": "Retailer"
             },
@@ -8191,6 +8436,6 @@
                 "ProviderType": "Retailer"
             }
         ],
-        "Version": "v11"
+        "Version": "v12"
     }
 ]

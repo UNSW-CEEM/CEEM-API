@@ -569,7 +569,7 @@
             },
             {
                 "CustomerType": "Residential",
-                "Date_accessed ": "2023-08",
+                "Date_accessed": "2023-08",
                 "Discount (%)": 0,
                 "Distributor": "EvoEnergy",
                 "Name": "Demand (EvoEnergy) Residential",
@@ -975,7 +975,7 @@
             },
             {
                 "CustomerType": "SmallBusiness",
-                "Date_accessed ": "2023-08",
+                "Date_accessed": "2023-08",
                 "Discount (%)": 0,
                 "Distributor": "EvoEnergy",
                 "Name": "Demand (EvoEnergy) Business",
@@ -2107,7 +2107,7 @@
             },
             {
                 "CustomerType": "Residential",
-                "Date_accessed ": "2023-08",
+                "Date_accessed": "2023-08",
                 "Discount (%)": 0,
                 "Distributor": "Essential Energy",
                 "Name": "Time of Use Demand (Essential Energy) Residential",
@@ -2926,7 +2926,7 @@
             },
             {
                 "CustomerType": "SmallBusiness",
-                "Date_accessed ": "2023-08",
+                "Date_accessed": "2023-08",
                 "Discount (%)": 0,
                 "Distributor": "Ausgrid",
                 "Name": "Demand (Ausgrid) Business",
@@ -3161,7 +3161,7 @@
             },
             {
                 "CustomerType": "SmallBusiness",
-                "Date_accessed ": "2023-08",
+                "Date_accessed": "2023-08",
                 "Discount (%)": 0,
                 "Distributor": "Essential Energy",
                 "Name": "Demand (Essential Energy) Business",
@@ -3903,7 +3903,7 @@
             },
             {
                 "CustomerType": "Residential",
-                "Date_accessed ": "2023-09",
+                "Date_accessed": "2023-09",
                 "Discount (%)": 0,
                 "Distributor": "Energex",
                 "Name": "Demand (Energex) Residential",
@@ -3962,7 +3962,7 @@
             },
             {
                 "CustomerType": "Residential",
-                "Date_accessed ": "2023-09",
+                "Date_accessed": "2023-09",
                 "Discount (%)": 0,
                 "Distributor": "Ergon Energy",
                 "Name": "Demand (Ergon Energy) Residential",
@@ -4277,7 +4277,7 @@
             },
             {
                 "CustomerType": "SmallBusiness",
-                "Date_accessed ": "2023-09",
+                "Date_accessed": "2023-09",
                 "Discount (%)": 0,
                 "Distributor": "Ergon Energy",
                 "Name": "Demand (Ergon Energy) Business",
@@ -6017,7 +6017,7 @@
             },
             {
                 "CustomerType": "SmallBusiness",
-                "Date_accessed ": "2023-08",
+                "Date_accessed": "2023-08",
                 "Discount (%)": 0,
                 "Distributor": "Jemena",
                 "Name": "Time of Use Demand (Jemena) Business",
@@ -6181,7 +6181,7 @@
             },
             {
                 "CustomerType": "SmallBusiness",
-                "Date_accessed ": "2023-09",
+                "Date_accessed": "2023-09",
                 "Discount (%)": 0,
                 "Distributor": "Jemena",
                 "Name": "Seasonal Time of Use Demand (Jemena) Business",

@@ -227,20 +227,24 @@ def find_lga(state, lat, long):
 @app.route('/AERBenchmarking/<postcode>')
 def find_aer_bm(postcode):
     AER = pd.read_csv(os.path.join('application', 'AERBenchmark.csv'))
-    cols = AER.columns.drop(['Season','Postcode','Climate Zone','State Zone Season','Household size'])
+    cols = AER.columns.drop(['Season','Postcode','Climate Zone','State Zone Season', 'State', 'Household size'])
     AER[cols] = AER[cols].apply(pd.to_numeric, errors='coerce').fillna(0)
-    AER['Postcode'] = AER['Postcode'].astype(int)
-    PC = float(postcode)
-    # Use QLD for NT and WA for now
-    if PC <2000:
-        PC=4000
-    elif (PC<7000) & (PC>=6000):
-        PC=4000
-    AER['Distance']=abs(AER['Postcode']-PC)
-    AER_ = AER[AER['Distance']==AER['Distance'].min()].reset_index(drop=True)
-    if AER_.shape[0]>4:
-        AER_ = AER_[AER_['Postcode']==AER_['Postcode'].min()].reset_index(drop=True)
-    # AER_
+
+    if postcode == "None":
+        AER_ = AER.groupby(['Season', 'Household size'])[cols].mean().reset_index(drop=False)
+    else:
+        AER['Postcode'] = AER['Postcode'].astype(int)
+        PC = float(postcode)
+        # Use QLD for NT and WA for now
+        if PC <2000:
+            PC=4000
+        elif (PC<7000) & (PC>=6000):
+            PC=4000
+        AER['Distance']=abs(AER['Postcode']-PC)
+        AER_ = AER[AER['Distance']==AER['Distance'].min()].reset_index(drop=True)
+        if AER_.shape[0]>4:
+            AER_ = AER_[AER_['Postcode']==AER_['Postcode'].min()].reset_index(drop=True)
+
     AER_2 = AER_.to_json(orient='records')
     return jsonify(AER_2)
 

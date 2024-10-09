@@ -7880,7 +7880,7 @@
                 "Distributor": "EvoEnergy",
                 "Name": "FiT Structure (EvoEnergy)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.12,
                             "Unit": "$/kWh",
@@ -7904,7 +7904,7 @@
                 "Distributor": "Endeavour Energy",
                 "Name": "FiT Structure (Endeavour Energy)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.13,
                             "Unit": "$/kWh",
@@ -7927,7 +7927,7 @@
                 "Distributor": "Essential Energy",
                 "Name": "FiT Structure (Essential Energy)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.13,
                             "Unit": "$/kWh",
@@ -7950,7 +7950,7 @@
                 "Distributor": "Ausgrid",
                 "Name": "FiT Structure (Ausgrid)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.13,
                             "Unit": "$/kWh",
@@ -7973,7 +7973,7 @@
                 "Distributor": "Energex",
                 "Name": "FiT Structure (Energex)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.12,
                             "Unit": "$/kWh",
@@ -7996,7 +7996,7 @@
                 "Distributor": "SA Power Networks",
                 "Name": "FiT Structure (SA Power Networks)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.11,
                             "Unit": "$/kWh",
@@ -8019,7 +8019,7 @@
                 "Distributor": "CitiPower",
                 "Name": "FiT Structure 1 (CitiPower)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.1012,
                             "Unit": "$/kWh",
@@ -8103,7 +8103,7 @@
                 "Distributor": "United Energy",
                 "Name": "FiT Structure 1 (United Energy)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.1012,
                             "Unit": "$/kWh",
@@ -8187,7 +8187,7 @@
                 "Distributor": "Ausnet Services",
                 "Name": "FiT Structure 1 (Ausnet Services)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.1012,
                             "Unit": "$/kWh",
@@ -8271,7 +8271,7 @@
                 "Distributor": "Powercor",
                 "Name": "FiT Structure 1 (Powercor)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.1012,
                             "Unit": "$/kWh",
@@ -8355,7 +8355,7 @@
                 "Distributor": "Jemena",
                 "Name": "FiT Structure 1 (Jemena)",
                 "Parameters": {
-                    "BlockDailyFit": {
+                    "BlockDailyFiT": {
                         "Block1": {
                             "Value": 0.1012,
                             "Unit": "$/kWh",

@@ -1,4 +1,4 @@
-TS,Restaurants,Small Office,Accommodation,Shopping Centre,Waste Water Facility,Large Office,Manufacturing,Supermarket,Industrial Facility,Hospital,Small Retail,Apartment Low-Rise No Lift,Apartment Medium-HighRise No Central Aircon,Apartment Medium-HighRise With Central Aircon
+TS,Restaurants,Small Office,Accommodation,Shopping Centre,Waste Water Facility,Large Office,Manufacturing,Supermarket,Industrial Facility,Hospital,Small Retail,"Apartment - Low Rise, No Lift","Apartment - Med-High Rise, No AC","Apartment - Med-High Rise, Central AC"
 1990-01-01 00:30:00,6.75,1.43,346.44,352.69,66.8,56.98,42.7,159.2,196.0,121.3,10.72,0.696594836,0.518761541,0.623711508
 1990-01-01 01:00:00,4.64,1.47,341.64,355.78,64.3,51.07,36.7,162.43,193.0,121.5,11.426,0.603017192,0.504355402,0.617934438
 1990-01-01 01:30:00,2.28,1.42,334.2,364.28,62.9,50.11,28.4,163.07,193.0,120.5,11.122,0.561419883,0.498175252,0.608965531

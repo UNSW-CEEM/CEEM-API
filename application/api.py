@@ -120,6 +120,12 @@ def large_commercial_tariffs():
         data_loaded = json.load(data_file)
         return jsonify(data_loaded)
 
+@app.route('/pv-load-disaggregation/kmeans-indicative')
+def pv_load_disaggregation():
+    with open(os.path.join('application', 'brisbane-k7-v1_kmeans-indicative_2022-01_0.json')) as data_file: # will change this file to a complete one later
+        data_loaded = json.load(data_file)
+        return jsonify(data_loaded)
+
 #  weather data from NASA Power
 # https://ceem-api.herokuapp.com/weather/20220101/20220201/-32/150
 @app.route('/weather/<start_date>/<end_date>/<lat>/<long>')

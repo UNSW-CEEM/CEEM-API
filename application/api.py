@@ -122,7 +122,7 @@ def large_commercial_tariffs():
 
 @app.route('/pv-load-disaggregation/kmeans-indicative')
 def pv_load_disaggregation():
-    with open(os.path.join('application', 'brisbane-k7-v1_kmeans-indicative_2022-01_0.json')) as data_file: # will change this file to a complete one later
+    with open(os.path.join('application', 'kmeans-indicative_v1.json')) as data_file: # will change this file to a complete one later
         data_loaded = json.load(data_file)
         return jsonify(data_loaded)
 

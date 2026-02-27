@@ -9,7 +9,7 @@
             "Value": 1.4429800000000002
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -35,7 +35,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -59,9 +59,35 @@
               "Unit": "$/kWh",
               "Value": 0.27071000000000006,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "09:00:00",
+                  "16:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.27071000000000006,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -91,7 +117,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Weekends, All Year": {
+            "Shoulder Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -149,7 +175,7 @@
             "Value": 0.28094
           },
           "Demand": {
-            "Single Rate Tariff Period Weekdays, All Year": {
+            "Single Rate Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -228,7 +254,7 @@
             "Value": 3.5114199999999998
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -258,7 +284,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -284,7 +310,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -310,7 +336,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -416,7 +442,7 @@
             "Value": 4.5342
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -446,7 +472,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -472,7 +498,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -498,7 +524,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -552,7 +578,7 @@
             "Value": 2.607
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -578,7 +604,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -602,9 +628,35 @@
               "Unit": "$/kWh",
               "Value": 0.2926,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.2926,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -630,7 +682,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -658,7 +710,7 @@
             }
           },
           "Demand": {
-            "Usage Charges Weekdays, All Year": {
+            "Usage Charges Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -715,7 +767,7 @@
             "Value": 0.3256
           },
           "Demand": {
-            "Usage Charges Weekdays, All Year": {
+            "Usage Charges Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -768,7 +820,7 @@
             "Value": 1.6720275
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -794,7 +846,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -820,7 +872,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -846,7 +898,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -948,7 +1000,7 @@
             "Value": 1.3295150000000002
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -974,7 +1026,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -1002,9 +1054,39 @@
               "Unit": "$/kWh",
               "Value": 0.17765000000000003,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "07:00:00"
+                ],
+                "T2": [
+                  "23:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.17765000000000003,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -1054,7 +1136,7 @@
             "Value": 1.71622
           },
           "TOU": {
-            "Peak Weekdays, Dec - Mar": {
+            "Peak Weekdays Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -1072,7 +1154,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Dec - Mar": {
+            "OffPeak All Week Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -1092,9 +1174,31 @@
               "Unit": "$/kWh",
               "Value": 0.24585,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Dec Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "23:00:00",
+                  "00:00:00"
+                ],
+                "T2": [
+                  "00:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.24585,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, Dec - Mar": {
+            "OffPeak Weekends Dec Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -1112,7 +1216,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekdays, Apr - Nov": {
+            "Peak Weekdays Apr Nov Weekday": {
               "Month": [
                 4,
                 5,
@@ -1134,7 +1238,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Apr - Nov": {
+            "OffPeak All Week Apr Nov Weekday": {
               "Month": [
                 4,
                 5,
@@ -1158,9 +1262,35 @@
               "Unit": "$/kWh",
               "Value": 0.24585,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Apr Nov Weekend": {
+              "Month": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "23:00:00",
+                  "00:00:00"
+                ],
+                "T2": [
+                  "00:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.24585,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, Apr - Nov": {
+            "OffPeak Weekends Apr Nov Weekend": {
               "Month": [
                 4,
                 5,
@@ -1184,7 +1314,7 @@
             }
           },
           "Demand": {
-            "Summer Demand Weekdays, Dec - Mar": {
+            "Summer Demand Weekdays Dec Mar Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -1205,7 +1335,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non- Summer Demand Weekdays, Apr - Nov": {
+            "Non Summer Demand Weekdays Apr Nov Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -1280,7 +1410,7 @@
             "Value": 1.3400200000000002
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -1306,7 +1436,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -1334,9 +1464,39 @@
               "Unit": "$/kWh",
               "Value": 0.15708,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "07:00:00"
+                ],
+                "T2": [
+                  "23:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.15708,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -1412,7 +1572,7 @@
             "Value": 1.392589
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -1436,9 +1596,35 @@
               "Unit": "$/kWh",
               "Value": 0.31629070000000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "07:00:00",
+                  "23:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.31629070000000004,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -1466,11 +1652,41 @@
               "Unit": "$/kWh",
               "Value": 0.22285010000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "07:00:00"
+                ],
+                "T2": [
+                  "23:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.22285010000000002,
+              "Weekday": false,
               "Weekend": true
             }
           },
           "Demand": {
-            "Demand period Weekdays, All Year": {
+            "Demand period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -1523,7 +1739,7 @@
             "Value": 1.62228
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -1549,7 +1765,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -1577,9 +1793,39 @@
               "Unit": "$/kWh",
               "Value": 0.16137,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "07:00:00"
+                ],
+                "T2": [
+                  "23:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.16137,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -1655,7 +1901,7 @@
             "Value": 1.4689400000000001
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -1681,7 +1927,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -1709,9 +1955,39 @@
               "Unit": "$/kWh",
               "Value": 0.14553,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "07:00:00"
+                ],
+                "T2": [
+                  "23:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.14553,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -1761,7 +2037,7 @@
             "Value": 4.51759
           },
           "TOU": {
-            "Peak Weekdays, Dec - Mar": {
+            "Peak Weekdays Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -1779,7 +2055,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Dec - Mar": {
+            "OffPeak All Week Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -1799,9 +2075,31 @@
               "Unit": "$/kWh",
               "Value": 0.19756,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Dec Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "23:00:00",
+                  "00:00:00"
+                ],
+                "T2": [
+                  "00:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.19756,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, Dec - Mar": {
+            "OffPeak Weekends Dec Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -1819,7 +2117,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekdays, Apr - Nov": {
+            "Peak Weekdays Apr Nov Weekday": {
               "Month": [
                 4,
                 5,
@@ -1841,7 +2139,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Apr - Nov": {
+            "OffPeak All Week Apr Nov Weekday": {
               "Month": [
                 4,
                 5,
@@ -1865,9 +2163,35 @@
               "Unit": "$/kWh",
               "Value": 0.19756,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Apr Nov Weekend": {
+              "Month": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "23:00:00",
+                  "00:00:00"
+                ],
+                "T2": [
+                  "00:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.19756,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, Apr - Nov": {
+            "OffPeak Weekends Apr Nov Weekend": {
               "Month": [
                 4,
                 5,
@@ -1891,7 +2215,7 @@
             }
           },
           "Demand": {
-            "Summer Demand Weekdays, Dec - Mar": {
+            "Summer Demand Weekdays Dec Mar Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -1912,7 +2236,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non- Summer Demand Weekdays, Apr - Nov": {
+            "Non Summer Demand Weekdays Apr Nov Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -1987,7 +2311,7 @@
             "Value": 1.5699750000000001
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -2013,7 +2337,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -2041,9 +2365,39 @@
               "Unit": "$/kWh",
               "Value": 0.16874,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "07:00:00"
+                ],
+                "T2": [
+                  "23:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.16874,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -2093,7 +2447,7 @@
             "Value": 5.051145
           },
           "TOU": {
-            "Peak Weekdays, Dec - Mar": {
+            "Peak Weekdays Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -2111,7 +2465,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Dec - Mar": {
+            "OffPeak All Week Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -2131,9 +2485,31 @@
               "Unit": "$/kWh",
               "Value": 0.21730500000000003,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Dec Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "23:00:00",
+                  "00:00:00"
+                ],
+                "T2": [
+                  "00:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.21730500000000003,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, Dec - Mar": {
+            "OffPeak Weekends Dec Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -2151,7 +2527,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekdays, Apr - Nov": {
+            "Peak Weekdays Apr Nov Weekday": {
               "Month": [
                 4,
                 5,
@@ -2173,7 +2549,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Apr - Nov": {
+            "OffPeak All Week Apr Nov Weekday": {
               "Month": [
                 4,
                 5,
@@ -2197,9 +2573,35 @@
               "Unit": "$/kWh",
               "Value": 0.21730500000000003,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Apr Nov Weekend": {
+              "Month": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "23:00:00",
+                  "00:00:00"
+                ],
+                "T2": [
+                  "00:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.21730500000000003,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, Apr - Nov": {
+            "OffPeak Weekends Apr Nov Weekend": {
               "Month": [
                 4,
                 5,
@@ -2223,7 +2625,7 @@
             }
           },
           "Demand": {
-            "Summer Demand Weekdays, Dec - Mar": {
+            "Summer Demand Weekdays Dec Mar Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -2244,7 +2646,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non- Summer Demand Weekdays, Apr - Nov": {
+            "Non Summer Demand Weekdays Apr Nov Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -2293,7 +2695,7 @@
             "Value": 3.5114199999999998
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -2323,7 +2725,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -2349,7 +2751,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -2375,7 +2777,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -2481,7 +2883,7 @@
             "Value": 1.548327
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -2507,7 +2909,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -2531,9 +2933,35 @@
               "Unit": "$/kWh",
               "Value": 0.126613,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.126613,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekends, All Year": {
+            "Shoulder Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -2583,7 +3011,7 @@
             "Value": 10.35518
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -2609,7 +3037,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -2635,7 +3063,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -2663,7 +3091,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -2716,7 +3144,7 @@
             "Value": 1.45574
           },
           "TOU": {
-            "Peak Weekdays, Nov - Mar": {
+            "Peak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -2735,7 +3163,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Peak Weekends, Nov - Mar": {
+            "Peak Weekends Nov Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -2754,7 +3182,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekdays, Nov - Mar": {
+            "OffPeak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -2773,7 +3201,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Nov - Mar": {
+            "OffPeak Weekends Nov Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -2792,7 +3220,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Nov - Mar": {
+            "Shoulder Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -2811,7 +3239,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Weekdays, Apr - Oct": {
+            "Shoulder Weekdays Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -2832,7 +3260,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Apr - Oct": {
+            "OffPeak Weekdays Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -2853,7 +3281,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Apr - Oct": {
+            "OffPeak Weekends Apr Oct Weekend": {
               "Month": [
                 4,
                 5,
@@ -2924,7 +3352,7 @@
             "Value": 1.617
           },
           "TOU": {
-            "Peak Weekdays, Nov - Mar": {
+            "Peak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -2943,7 +3371,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Peak Weekends, Nov - Mar": {
+            "Peak Weekends Nov Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -2962,7 +3390,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekdays, Nov - Mar": {
+            "OffPeak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -2981,7 +3409,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Nov - Mar": {
+            "OffPeak Weekends Nov Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -3000,7 +3428,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Nov - Mar": {
+            "Shoulder Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -3019,7 +3447,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Apr - Oct": {
+            "OffPeak Weekdays Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -3040,7 +3468,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Apr - Oct": {
+            "OffPeak Weekends Apr Oct Weekend": {
               "Month": [
                 4,
                 5,
@@ -3061,7 +3489,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Apr - Oct": {
+            "Shoulder Weekdays Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -3084,7 +3512,7 @@
             }
           },
           "Demand": {
-            "Summer Weekdays, Nov - Mar": {
+            "Summer Weekdays Nov Mar Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -3130,7 +3558,7 @@
             "Value": 1.5763000000000003
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3156,7 +3584,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3182,7 +3610,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -3258,7 +3686,7 @@
             "Value": 3.5114199999999998
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3288,7 +3716,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3314,7 +3742,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -3340,7 +3768,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3394,7 +3822,7 @@
             "Value": 2.943435
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3420,7 +3848,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3444,9 +3872,35 @@
               "Unit": "$/kWh",
               "Value": 0.20922000000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.20922000000000002,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3476,7 +3930,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Weekends, All Year": {
+            "Shoulder Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -3526,7 +3980,7 @@
             "Value": 5.85893
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3552,7 +4006,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3578,7 +4032,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -3604,7 +4058,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -3636,7 +4090,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -3715,7 +4169,7 @@
             "Value": 8.1532
           },
           "TOU": {
-            "Peak Weekdays, Nov - Mar": {
+            "Peak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -3734,7 +4188,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Nov - Mar": {
+            "OffPeak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -3753,7 +4207,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Nov - Mar": {
+            "OffPeak Weekends Nov Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -3772,7 +4226,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Nov - Mar": {
+            "Shoulder Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -3795,7 +4249,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Apr - May": {
+            "OffPeak Weekdays Apr May Weekday": {
               "Month": [
                 4,
                 5
@@ -3811,7 +4265,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Apr - May": {
+            "OffPeak Weekends Apr May Weekend": {
               "Month": [
                 4,
                 5
@@ -3827,7 +4281,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Apr - May": {
+            "Shoulder Weekdays Apr May Weekday": {
               "Month": [
                 4,
                 5
@@ -3843,7 +4297,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Peak Weekdays, Jun - Aug": {
+            "Peak Weekdays Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -3860,7 +4314,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Jun - Aug": {
+            "OffPeak Weekdays Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -3877,7 +4331,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Jun - Aug": {
+            "OffPeak Weekends Jun Aug Weekend": {
               "Month": [
                 6,
                 7,
@@ -3894,7 +4348,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Jun - Aug": {
+            "Shoulder Weekdays Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -3915,7 +4369,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Sep - Oct": {
+            "OffPeak Weekdays Sep Oct Weekday": {
               "Month": [
                 9,
                 10
@@ -3931,7 +4385,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Sep - Oct": {
+            "OffPeak Weekends Sep Oct Weekend": {
               "Month": [
                 9,
                 10
@@ -3947,7 +4401,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Sep - Oct": {
+            "Shoulder Weekdays Sep Oct Weekday": {
               "Month": [
                 9,
                 10
@@ -3965,7 +4419,7 @@
             }
           },
           "Demand": {
-            "Summer Weekdays, Nov - Mar": {
+            "Summer Weekdays Nov Mar Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -3987,7 +4441,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non-Summer/Non-Winter Weekdays, Apr - May": {
+            "NonSummer/NonWinter Weekdays Apr May Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -4006,7 +4460,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Winter Weekdays, Jun - Aug": {
+            "Winter Weekdays Jun Aug Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -4026,7 +4480,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non-Summer/Non-Winter Weekdays, Sep - Oct": {
+            "NonSummer/NonWinter Weekdays Sep Oct Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -4069,7 +4523,7 @@
             "Value": 2.9359
           },
           "TOU": {
-            "Peak Weekdays, Nov - Mar": {
+            "Peak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -4088,7 +4542,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Nov - Mar": {
+            "OffPeak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -4107,7 +4561,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Nov - Mar": {
+            "OffPeak Weekends Nov Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -4126,7 +4580,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Nov - Mar": {
+            "Shoulder Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -4149,7 +4603,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Apr - May": {
+            "OffPeak Weekdays Apr May Weekday": {
               "Month": [
                 4,
                 5
@@ -4165,7 +4619,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Apr - May": {
+            "OffPeak Weekends Apr May Weekend": {
               "Month": [
                 4,
                 5
@@ -4181,7 +4635,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Apr - May": {
+            "Shoulder Weekdays Apr May Weekday": {
               "Month": [
                 4,
                 5
@@ -4197,7 +4651,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Peak Weekdays, Jun - Aug": {
+            "Peak Weekdays Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -4214,7 +4668,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Jun - Aug": {
+            "OffPeak Weekdays Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -4231,7 +4685,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Jun - Aug": {
+            "OffPeak Weekends Jun Aug Weekend": {
               "Month": [
                 6,
                 7,
@@ -4248,7 +4702,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Jun - Aug": {
+            "Shoulder Weekdays Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -4269,7 +4723,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Sep - Oct": {
+            "OffPeak Weekdays Sep Oct Weekday": {
               "Month": [
                 9,
                 10
@@ -4285,7 +4739,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Sep - Oct": {
+            "OffPeak Weekends Sep Oct Weekend": {
               "Month": [
                 9,
                 10
@@ -4301,7 +4755,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Sep - Oct": {
+            "Shoulder Weekdays Sep Oct Weekday": {
               "Month": [
                 9,
                 10
@@ -4341,7 +4795,7 @@
             "Value": 1.5895000000000001
           },
           "TOU": {
-            "Peak Weekdays, Nov - Mar": {
+            "Peak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -4360,7 +4814,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Nov - Mar": {
+            "OffPeak All Week Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -4377,9 +4831,28 @@
               "Unit": "$/kWh",
               "Value": 0.32503680000000007,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Nov Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "14:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.32503680000000007,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Nov - Mar": {
+            "Shoulder Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -4402,7 +4875,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder All Week, Nov - Mar": {
+            "Shoulder All Week Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -4419,9 +4892,28 @@
               "Unit": "$/kWh",
               "Value": 0.41310720000000006,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week Nov Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "10:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.41310720000000006,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekends, Nov - Mar": {
+            "Shoulder Weekends Nov Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -4440,7 +4932,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekdays, Apr - Oct": {
+            "Peak Weekdays Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -4461,7 +4953,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Apr - Oct": {
+            "OffPeak All Week Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -4480,9 +4972,30 @@
               "Unit": "$/kWh",
               "Value": 0.32503680000000007,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Apr Oct Weekend": {
+              "Month": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "14:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.32503680000000007,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Apr - Oct": {
+            "Shoulder Weekdays Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -4507,7 +5020,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder All Week, Apr - Oct": {
+            "Shoulder All Week Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -4526,9 +5039,30 @@
               "Unit": "$/kWh",
               "Value": 0.41310720000000006,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week Apr Oct Weekend": {
+              "Month": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "10:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.41310720000000006,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekends, Apr - Oct": {
+            "Shoulder Weekends Apr Oct Weekend": {
               "Month": [
                 4,
                 5,
@@ -4599,7 +5133,7 @@
             "Value": 1.4190000000000003
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -4625,7 +5159,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -4649,9 +5183,35 @@
               "Unit": "$/kWh",
               "Value": 0.28765,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.28765,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -4677,7 +5237,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -4735,7 +5295,7 @@
             "Value": 0.32109000000000004
           },
           "Demand": {
-            "Single Rate Tariff Period Weekdays, All Year": {
+            "Single Rate Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -4788,7 +5348,7 @@
             "Value": 1.6731
           },
           "TOU": {
-            "Peak All Week, Nov - Mar": {
+            "Peak All Week Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -4809,9 +5369,32 @@
               "Unit": "$/kWh",
               "Value": 0.429627,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week Nov Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "10:00:00"
+                ],
+                "T2": [
+                  "14:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.429627,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, Nov - Mar": {
+            "Shoulder All Week Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -4828,9 +5411,28 @@
               "Unit": "$/kWh",
               "Value": 0.22244200000000003,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week Nov Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "14:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.22244200000000003,
+              "Weekday": false,
               "Weekend": true
             },
-            "Peak All Week, Apr - Oct": {
+            "Peak All Week Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -4853,9 +5455,34 @@
               "Unit": "$/kWh",
               "Value": 0.429627,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week Apr Oct Weekend": {
+              "Month": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "10:00:00"
+                ],
+                "T2": [
+                  "14:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.429627,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, Apr - Oct": {
+            "Shoulder All Week Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -4874,11 +5501,32 @@
               "Unit": "$/kWh",
               "Value": 0.22244200000000003,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week Apr Oct Weekend": {
+              "Month": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "14:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.22244200000000003,
+              "Weekday": false,
               "Weekend": true
             }
           },
           "Demand": {
-            "Summer Weekdays, Nov - Mar": {
+            "Summer Weekdays Nov Mar Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -4900,7 +5548,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non Summer Weekdays, Apr - Oct": {
+            "Non Summer Weekdays Apr Oct Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -4948,7 +5596,7 @@
             "Value": 2.607
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -4974,7 +5622,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -4998,9 +5646,35 @@
               "Unit": "$/kWh",
               "Value": 0.2926,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.2926,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -5026,7 +5700,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5054,7 +5728,7 @@
             }
           },
           "Demand": {
-            "Usage Charges Weekdays, All Year": {
+            "Usage Charges Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -5111,7 +5785,7 @@
             "Value": 0.3256
           },
           "Demand": {
-            "Usage Charges Weekdays, All Year": {
+            "Usage Charges Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -5164,7 +5838,7 @@
             "Value": 1.6720275
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5190,7 +5864,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5216,7 +5890,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -5242,7 +5916,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5318,7 +5992,7 @@
             "Value": 1.7358825
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5348,7 +6022,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5374,7 +6048,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -5400,7 +6074,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5480,7 +6154,7 @@
             "Value": 1.9200225000000002
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5510,7 +6184,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5536,7 +6210,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -5562,7 +6236,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5594,7 +6268,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -5647,7 +6321,7 @@
             "Value": 0.9303525000000001
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5671,9 +6345,35 @@
               "Unit": "$/kWh",
               "Value": 0.45793,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "15:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.45793,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5701,9 +6401,39 @@
               "Unit": "$/kWh",
               "Value": 0.30261000000000005,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "14:00:00",
+                  "15:00:00"
+                ],
+                "T2": [
+                  "21:00:00",
+                  "10:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.30261000000000005,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -5727,6 +6457,32 @@
               "Unit": "$/kWh",
               "Value": 0.21538000000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "14:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.21538000000000002,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -5779,7 +6535,7 @@
             "Value": 1.2320000000000002
           },
           "TOU": {
-            "Peak Weekdays, Nov - Mar": {
+            "Peak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -5798,7 +6554,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Nov - Mar": {
+            "OffPeak All Week Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -5815,9 +6571,28 @@
               "Unit": "$/kWh",
               "Value": 0.296065,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Nov Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.296065,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Nov - Mar": {
+            "Shoulder Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -5840,7 +6615,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Weekends, Nov - Mar": {
+            "Shoulder Weekends Nov Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -5859,7 +6634,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, Apr - May": {
+            "OffPeak All Week Apr May Weekday": {
               "Month": [
                 4,
                 5
@@ -5873,9 +6648,25 @@
               "Unit": "$/kWh",
               "Value": 0.296065,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Apr May Weekend": {
+              "Month": [
+                4,
+                5
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.296065,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, Apr - May": {
+            "Shoulder All Week Apr May Weekday": {
               "Month": [
                 4,
                 5
@@ -5889,9 +6680,25 @@
               "Unit": "$/kWh",
               "Value": 0.37330700000000006,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week Apr May Weekend": {
+              "Month": [
+                4,
+                5
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "07:00:00",
+                  "22:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.37330700000000006,
+              "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekdays, Jun - Aug": {
+            "Peak Weekdays Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -5908,7 +6715,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Jun - Aug": {
+            "OffPeak All Week Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -5923,9 +6730,26 @@
               "Unit": "$/kWh",
               "Value": 0.296065,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Jun Aug Weekend": {
+              "Month": [
+                6,
+                7,
+                8
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.296065,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Jun - Aug": {
+            "Shoulder Weekdays Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -5946,7 +6770,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Weekends, Jun - Aug": {
+            "Shoulder Weekends Jun Aug Weekend": {
               "Month": [
                 6,
                 7,
@@ -5963,7 +6787,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, Sep - Oct": {
+            "OffPeak All Week Sep Oct Weekday": {
               "Month": [
                 9,
                 10
@@ -5977,9 +6801,25 @@
               "Unit": "$/kWh",
               "Value": 0.296065,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Sep Oct Weekend": {
+              "Month": [
+                9,
+                10
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.296065,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, Sep - Oct": {
+            "Shoulder All Week Sep Oct Weekday": {
               "Month": [
                 9,
                 10
@@ -5993,6 +6833,22 @@
               "Unit": "$/kWh",
               "Value": 0.37330700000000006,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week Sep Oct Weekend": {
+              "Month": [
+                9,
+                10
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "07:00:00",
+                  "22:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.37330700000000006,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -6045,7 +6901,7 @@
             "Value": 1.3739000000000001
           },
           "TOU": {
-            "Peak Weekdays, Nov - Mar": {
+            "Peak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -6064,7 +6920,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Nov - Mar": {
+            "OffPeak Weekdays Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -6087,7 +6943,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Nov - Mar": {
+            "OffPeak Weekends Nov Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -6110,7 +6966,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, Nov - Mar": {
+            "Shoulder All Week Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -6127,9 +6983,28 @@
               "Unit": "$/kWh",
               "Value": 0.19401800000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week Nov Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "14:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.19401800000000002,
+              "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekdays, Apr - Oct": {
+            "Peak Weekdays Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -6150,7 +7025,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Apr - Oct": {
+            "OffPeak Weekdays Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -6175,7 +7050,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Apr - Oct": {
+            "OffPeak Weekends Apr Oct Weekend": {
               "Month": [
                 4,
                 5,
@@ -6200,7 +7075,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, Apr - Oct": {
+            "Shoulder All Week Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -6219,6 +7094,27 @@
               "Unit": "$/kWh",
               "Value": 0.19401800000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week Apr Oct Weekend": {
+              "Month": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "14:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.19401800000000002,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -6245,7 +7141,7 @@
             "Value": 0.9749025000000001
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6269,9 +7165,35 @@
               "Unit": "$/kWh",
               "Value": 0.40447000000000005,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "16:00:00",
+                  "20:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.40447000000000005,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6299,9 +7221,39 @@
               "Unit": "$/kWh",
               "Value": 0.33715,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "14:00:00",
+                  "16:00:00"
+                ],
+                "T2": [
+                  "20:00:00",
+                  "10:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.33715,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6325,6 +7277,32 @@
               "Unit": "$/kWh",
               "Value": 0.26730000000000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "14:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.26730000000000004,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -6351,7 +7329,7 @@
             "Value": 1.279025
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6379,9 +7357,39 @@
               "Unit": "$/kWh",
               "Value": 0.45137977500000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "07:00:00",
+                  "09:00:00"
+                ],
+                "T2": [
+                  "17:00:00",
+                  "20:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.45137977500000004,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6405,9 +7413,35 @@
               "Unit": "$/kWh",
               "Value": 0.25486725000000005,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.25486725000000005,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6435,6 +7469,36 @@
               "Unit": "$/kWh",
               "Value": 0.326992875,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "09:00:00",
+                  "17:00:00"
+                ],
+                "T2": [
+                  "20:00:00",
+                  "22:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.326992875,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -6491,7 +7555,7 @@
             "Value": 0.29755000000000004
           },
           "Demand": {
-            "Usage Charges All Week, All Year": {
+            "Usage Charges All Week All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -6518,6 +7582,35 @@
               "Unit": "$/kW/Day",
               "Value": 0.2662,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Usage Charges All Week All Year Weekend": {
+              "Min Demand (kW)": 0.0,
+              "Max Demand (kW)": 0.0,
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "Number of Peaks": 1,
+              "TimeIntervals": {
+                "T1": [
+                  "17:00",
+                  "20:00"
+                ]
+              },
+              "Unit": "$/kW/Day",
+              "Value": 0.2662,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -6544,7 +7637,7 @@
             "Value": 1.100165
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6576,9 +7669,43 @@
               "Unit": "$/kWh",
               "Value": 0.52635,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "06:00:00",
+                  "10:00:00"
+                ],
+                "T2": [
+                  "15:00:00",
+                  "00:00:00"
+                ],
+                "T3": [
+                  "00:00:00",
+                  "01:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.52635,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6602,9 +7729,35 @@
               "Unit": "$/kWh",
               "Value": 0.3421,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "01:00:00",
+                  "06:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.3421,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6628,6 +7781,32 @@
               "Unit": "$/kWh",
               "Value": 0.24189000000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "15:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.24189000000000002,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -6706,7 +7885,7 @@
             "Value": 1.511814
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6736,7 +7915,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6766,7 +7945,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -6842,7 +8021,7 @@
             "Value": 1.1644666000000001
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6866,9 +8045,35 @@
               "Unit": "$/kWh",
               "Value": 0.35603062,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "15:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.35603062,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6896,6 +8101,36 @@
               "Unit": "$/kWh",
               "Value": 0.2241436266666667,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "15:00:00"
+                ],
+                "T2": [
+                  "21:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.2241436266666667,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -6948,7 +8183,7 @@
             "Value": 1.2954186666666667
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6972,9 +8207,35 @@
               "Unit": "$/kWh",
               "Value": 0.38242629333333333,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "15:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.38242629333333333,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7002,6 +8263,36 @@
               "Unit": "$/kWh",
               "Value": 0.22388666666666668,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "15:00:00"
+                ],
+                "T2": [
+                  "21:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.22388666666666668,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -7054,7 +8345,7 @@
             "Value": 1.1745139999999998
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7078,9 +8369,35 @@
               "Unit": "$/kWh",
               "Value": 0.3438969600000001,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "15:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.3438969600000001,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7108,6 +8425,36 @@
               "Unit": "$/kWh",
               "Value": 0.2088397666666667,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "15:00:00"
+                ],
+                "T2": [
+                  "21:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.2088397666666667,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -7160,7 +8507,7 @@
             "Value": 1.1026619999999998
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7184,9 +8531,35 @@
               "Unit": "$/kWh",
               "Value": 0.36321457333333335,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "15:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.36321457333333335,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7214,6 +8587,36 @@
               "Unit": "$/kWh",
               "Value": 0.21763866666666667,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "15:00:00"
+                ],
+                "T2": [
+                  "21:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.21763866666666667,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -7266,7 +8669,7 @@
             "Value": 1.3391546666666667
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7290,9 +8693,35 @@
               "Unit": "$/kWh",
               "Value": 0.4431864800000001,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "15:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.4431864800000001,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7320,6 +8749,36 @@
               "Unit": "$/kWh",
               "Value": 0.22711553333333337,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "15:00:00"
+                ],
+                "T2": [
+                  "21:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.22711553333333337,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -7346,7 +8805,7 @@
             "Value": 1.7358825
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7376,7 +8835,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7402,7 +8861,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -7428,7 +8887,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7508,7 +8967,7 @@
             "Value": 1.9200225000000002
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7538,7 +8997,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7564,7 +9023,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -7590,7 +9049,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7622,7 +9081,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -7701,7 +9160,7 @@
             "Value": 1.2676950000000002
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7725,9 +9184,35 @@
               "Unit": "$/kWh",
               "Value": 0.42361000000000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "16:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.42361000000000004,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7751,9 +9236,35 @@
               "Unit": "$/kWh",
               "Value": 0.21175000000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "09:00:00",
+                  "16:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.21175000000000002,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7781,6 +9292,36 @@
               "Unit": "$/kWh",
               "Value": 0.3201,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "21:00:00",
+                  "00:00:00"
+                ],
+                "T2": [
+                  "00:00:00",
+                  "09:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.3201,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -7807,7 +9348,7 @@
             "Value": 1.7358825
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7837,7 +9378,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7863,7 +9404,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -7889,7 +9430,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7969,7 +9510,7 @@
             "Value": 1.9200225000000002
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7999,7 +9540,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8025,7 +9566,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -8051,7 +9592,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8083,7 +9624,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -8136,7 +9677,7 @@
             "Value": 1.4883440000000001
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8160,9 +9701,35 @@
               "Unit": "$/kWh",
               "Value": 0.515372,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "16:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.515372,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8186,9 +9753,35 @@
               "Unit": "$/kWh",
               "Value": 0.27204649999999997,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "21:00:00",
+                  "11:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.27204649999999997,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8212,6 +9805,32 @@
               "Unit": "$/kWh",
               "Value": 0.15202000000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "11:00:00",
+                  "16:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.15202000000000002,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -8264,7 +9883,7 @@
             "Value": 1.266661
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8288,9 +9907,35 @@
               "Unit": "$/kWh",
               "Value": 0.249843,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "16:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.249843,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8314,9 +9959,35 @@
               "Unit": "$/kWh",
               "Value": 0.280346,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "21:00:00",
+                  "11:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.280346,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8340,11 +10011,37 @@
               "Unit": "$/kWh",
               "Value": 0.22679800000000003,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "11:00:00",
+                  "16:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.22679800000000003,
+              "Weekday": false,
               "Weekend": true
             }
           },
           "Demand": {
-            "Trf 14C Res (TOU Demand) All Week, All Year": {
+            "Trf 14C Res (TOU Demand) All Week All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -8371,6 +10068,35 @@
               "Unit": "$/kW/Day",
               "Value": 0.009269665454545457,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Trf 14C Res (TOU Demand) All Week All Year Weekend": {
+              "Min Demand (kW)": 0.0,
+              "Max Demand (kW)": 0.0,
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "Number of Peaks": 1,
+              "TimeIntervals": {
+                "T1": [
+                  "16:00",
+                  "21:00"
+                ]
+              },
+              "Unit": "$/kW/Day",
+              "Value": 0.009269665454545457,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -8397,7 +10123,7 @@
             "Value": 2.0955000000000004
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8425,9 +10151,39 @@
               "Unit": "$/kWh",
               "Value": 0.5330050000000001,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "07:00:00",
+                  "10:00:00"
+                ],
+                "T2": [
+                  "15:00:00",
+                  "22:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.5330050000000001,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8455,6 +10211,36 @@
               "Unit": "$/kWh",
               "Value": 0.338316,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "15:00:00"
+                ],
+                "T2": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.338316,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -8507,7 +10293,7 @@
             "Value": 2.321
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8533,7 +10319,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8557,9 +10343,35 @@
               "Unit": "$/kWh",
               "Value": 0.341,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.341,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -8585,7 +10397,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8617,7 +10429,7 @@
             }
           },
           "Demand": {
-            "Usage Charges Weekdays, All Year": {
+            "Usage Charges Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -8670,7 +10482,7 @@
             "Value": 1.279025
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8698,9 +10510,39 @@
               "Unit": "$/kWh",
               "Value": 0.45137977500000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "07:00:00",
+                  "09:00:00"
+                ],
+                "T2": [
+                  "17:00:00",
+                  "20:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.45137977500000004,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8724,9 +10566,35 @@
               "Unit": "$/kWh",
               "Value": 0.25486725000000005,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.25486725000000005,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -8754,6 +10622,36 @@
               "Unit": "$/kWh",
               "Value": 0.326992875,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "09:00:00",
+                  "17:00:00"
+                ],
+                "T2": [
+                  "20:00:00",
+                  "22:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.326992875,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -8810,7 +10708,7 @@
             "Value": 0.29755000000000004
           },
           "Demand": {
-            "Usage Charges All Week, All Year": {
+            "Usage Charges All Week All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -8837,6 +10735,35 @@
               "Unit": "$/kW/Day",
               "Value": 0.2662,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Usage Charges All Week All Year Weekend": {
+              "Min Demand (kW)": 0.0,
+              "Max Demand (kW)": 0.0,
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "Number of Peaks": 1,
+              "TimeIntervals": {
+                "T1": [
+                  "17:00",
+                  "20:00"
+                ]
+              },
+              "Unit": "$/kW/Day",
+              "Value": 0.2662,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -8902,7 +10829,7 @@
             "Unit": "$/kWh"
           },
           "TOU": {
-            "Peak Weekdays": {
+            "Peak Weekdays Weekday": {
               "Month": [
                 1,
                 2,
@@ -8928,7 +10855,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Peak Weekend": {
+            "Peak Weekend Weekend": {
               "Month": [
                 1,
                 2,
@@ -8954,7 +10881,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Off Peak Weekdays": {
+            "Off Peak Weekdays Weekday": {
               "Month": [
                 1,
                 2,
@@ -8980,7 +10907,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off Peak Weekend": {
+            "Off Peak Weekend Weekend": {
               "Month": [
                 1,
                 2,
@@ -9404,7 +11331,7 @@
             }
           },
           "TOU": {
-            "Peak Weekdays": {
+            "Peak Weekdays Weekday": {
               "Month": [
                 1,
                 2,
@@ -9430,7 +11357,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off Peak Weekdays": {
+            "Off Peak Weekdays Weekday": {
               "Month": [
                 1,
                 2,
@@ -9456,7 +11383,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off Peak Weeekend": {
+            "Off Peak Weeekend Weekend": {
               "Month": [
                 1,
                 2,
@@ -9532,7 +11459,7 @@
             "Unit": "$/kWh"
           },
           "TOU": {
-            "Peak Weekdays": {
+            "Peak Weekdays Weekday": {
               "Month": [
                 1,
                 2,
@@ -9558,7 +11485,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off Peak Weekdays": {
+            "Off Peak Weekdays Weekday": {
               "Month": [
                 1,
                 2,
@@ -9584,7 +11511,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off Peak Weekend": {
+            "Off Peak Weekend Weekend": {
               "Month": [
                 1,
                 2,
@@ -9992,7 +11919,7 @@
             }
           },
           "TOU": {
-            "Peak Weekdays": {
+            "Peak Weekdays Weekday": {
               "Month": [
                 1,
                 2,
@@ -10018,7 +11945,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Peak Weekend": {
+            "Peak Weekend Weekend": {
               "Month": [
                 1,
                 2,
@@ -10044,7 +11971,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays": {
+            "Shoulder Weekdays Weekday": {
               "Month": [
                 1,
                 2,
@@ -10070,7 +11997,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Weekend": {
+            "Shoulder Weekend Weekend": {
               "Month": [
                 1,
                 2,
@@ -10096,7 +12023,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Off Peak Weekend": {
+            "Off Peak Weekend Weekday": {
               "Month": [
                 1,
                 2,
@@ -10122,7 +12049,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off Peak Weeekend": {
+            "Off Peak Weeekend Weekend": {
               "Month": [
                 1,
                 2,
@@ -14182,7 +16109,7 @@
             "Value": 0.0884
           },
           "TOU": {
-            "Off Peak Weekday": {
+            "Off Peak Weekday Weekday": {
               "Month": [
                 1,
                 2,
@@ -14206,9 +16133,35 @@
               "Unit": "$/kWh",
               "Value": 0.18,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Off Peak Weekday Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.18,
+              "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekday": {
+            "Peak Weekday Weekday": {
               "Month": [
                 1,
                 2,
@@ -14236,9 +16189,39 @@
               "Unit": "$/kWh",
               "Value": 0.4,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak Weekday Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "07:00:00",
+                  "09:00:00"
+                ],
+                "T2": [
+                  "17:00:00",
+                  "20:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.4,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekday": {
+            "Shoulder Weekday Weekday": {
               "Month": [
                 1,
                 2,
@@ -14266,6 +16249,36 @@
               "Unit": "$/kWh",
               "Value": 0.25,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder Weekday Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "09:00:00",
+                  "17:00:00"
+                ],
+                "T2": [
+                  "20:00:00",
+                  "22:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.25,
+              "Weekday": false,
               "Weekend": true
             }
           }
@@ -14292,7 +16305,7 @@
             "Value": 0.0884
           },
           "TOU": {
-            "Off Peak Weekday": {
+            "Off Peak Weekday Weekday": {
               "Month": [
                 1,
                 2,
@@ -14316,9 +16329,35 @@
               "Unit": "$/kWh",
               "Value": 0.18,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Off Peak Weekday Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.18,
+              "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekday": {
+            "Peak Weekday Weekday": {
               "Month": [
                 1,
                 2,
@@ -14346,9 +16385,39 @@
               "Unit": "$/kWh",
               "Value": 0.4,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak Weekday Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "07:00:00",
+                  "09:00:00"
+                ],
+                "T2": [
+                  "17:00:00",
+                  "20:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.4,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekday": {
+            "Shoulder Weekday Weekday": {
               "Month": [
                 1,
                 2,
@@ -14376,6 +16445,36 @@
               "Unit": "$/kWh",
               "Value": 0.25,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder Weekday Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "09:00:00",
+                  "17:00:00"
+                ],
+                "T2": [
+                  "20:00:00",
+                  "22:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.25,
+              "Weekday": false,
               "Weekend": true
             }
           }
@@ -14395,7 +16494,7 @@
             "Value": 2.016245
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14421,7 +16520,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14445,9 +16544,35 @@
               "Unit": "$/kWh",
               "Value": 0.26526500000000003,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "11:00:00",
+                  "13:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.26526500000000003,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14477,7 +16602,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Weekends, All Year": {
+            "Shoulder Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -14505,7 +16630,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -14558,7 +16683,7 @@
             "Value": 4.7663
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14588,7 +16713,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14614,7 +16739,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -14640,7 +16765,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14672,7 +16797,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -14751,7 +16876,7 @@
             "Value": 1.767403
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14777,7 +16902,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14805,9 +16930,39 @@
               "Unit": "$/kWh",
               "Value": 0.31958300000000006,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "20:00:00",
+                  "11:00:00"
+                ],
+                "T2": [
+                  "13:00:00",
+                  "17:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.31958300000000006,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekends, All Year": {
+            "Shoulder Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -14833,7 +16988,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14857,11 +17012,37 @@
               "Unit": "$/kWh",
               "Value": 0.23661000000000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "11:00:00",
+                  "13:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.23661000000000004,
+              "Weekday": false,
               "Weekend": true
             }
           },
           "Demand": {
-            "Trf24C Bus(TOU Mthly Dmnd) Weekdays, All Year": {
+            "Trf24C Bus(TOU Mthly Dmnd) Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -14914,7 +17095,7 @@
             "Value": 2.062104
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14940,7 +17121,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -14968,9 +17149,39 @@
               "Unit": "$/kWh",
               "Value": 0.31010650000000006,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "20:00:00",
+                  "11:00:00"
+                ],
+                "T2": [
+                  "13:00:00",
+                  "17:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.31010650000000006,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekends, All Year": {
+            "Shoulder Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -14996,7 +17207,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -15020,6 +17231,32 @@
               "Unit": "$/kWh",
               "Value": 0.15599650000000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "11:00:00",
+                  "13:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.15599650000000004,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -15050,7 +17287,7 @@
             "Value": 0.36025
           },
           "Demand": {
-            "Single Rate Tariff Period Weekdays, All Year": {
+            "Single Rate Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -15103,7 +17340,7 @@
             "Value": 4.7663
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -15133,7 +17370,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -15159,7 +17396,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -15185,7 +17422,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -15217,7 +17454,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -15270,7 +17507,7 @@
             "Value": 1.1880000000000002
           },
           "TOU": {
-            "Peak Weekdays, Dec - Mar": {
+            "Peak Weekdays Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -15288,7 +17525,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Dec - Mar": {
+            "OffPeak Weekdays Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -15310,7 +17547,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Dec - Mar": {
+            "OffPeak Weekends Dec Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -15328,7 +17565,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekdays, Apr - Nov": {
+            "Peak Weekdays Apr Nov Weekday": {
               "Month": [
                 4,
                 5,
@@ -15350,7 +17587,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Apr - Nov": {
+            "OffPeak Weekdays Apr Nov Weekday": {
               "Month": [
                 4,
                 5,
@@ -15376,7 +17613,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Apr - Nov": {
+            "OffPeak Weekends Apr Nov Weekend": {
               "Month": [
                 4,
                 5,
@@ -15400,7 +17637,7 @@
             }
           },
           "Demand": {
-            "Summer Weekdays, Dec - Mar": {
+            "Summer Weekdays Dec Mar Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -15421,7 +17658,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non-Summer Weekdays, Apr - Nov": {
+            "NonSummer Weekdays Apr Nov Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -15474,7 +17711,7 @@
             "Value": 0.32736427693750003
           },
           "Demand": {
-            "Demand period All Week, All Year": {
+            "Demand period All Week All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -15501,6 +17738,35 @@
               "Unit": "$/kW/Day",
               "Value": 0.23298,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Demand period All Week All Year Weekend": {
+              "Min Demand (kW)": 0.0,
+              "Max Demand (kW)": 0.0,
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "Number of Peaks": 1,
+              "TimeIntervals": {
+                "T1": [
+                  "00:00",
+                  "00:00"
+                ]
+              },
+              "Unit": "$/kW/Day",
+              "Value": 0.23298,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -15527,7 +17793,7 @@
             "Value": 4.7663
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -15557,7 +17823,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -15583,7 +17849,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -15609,7 +17875,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -15641,7 +17907,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -15694,7 +17960,7 @@
             "Value": 4.653
           },
           "TOU": {
-            "Peak Weekdays, Apr - Sep": {
+            "Peak Weekdays Apr Sep Weekday": {
               "Month": [
                 4,
                 5,
@@ -15714,7 +17980,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Apr - Sep": {
+            "OffPeak All Week Apr Sep Weekday": {
               "Month": [
                 4,
                 5,
@@ -15732,9 +17998,29 @@
               "Unit": "$/kWh",
               "Value": 0.19824346666666667,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Apr Sep Weekend": {
+              "Month": [
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.19824346666666667,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekends, Apr - Sep": {
+            "Shoulder Weekends Apr Sep Weekend": {
               "Month": [
                 4,
                 5,
@@ -15754,7 +18040,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekdays, Oct - Mar": {
+            "OffPeak Weekdays Oct Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -15774,7 +18060,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Oct - Mar": {
+            "OffPeak Weekends Oct Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -15794,7 +18080,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, Oct - Mar": {
+            "Shoulder Weekdays Oct Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -15842,7 +18128,7 @@
             "Value": 0.26620000000000005
           },
           "Demand": {
-            "Single Rate Tariff Period Weekdays, All Year": {
+            "Single Rate Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -15895,7 +18181,7 @@
             "Value": 4.7663
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -15925,7 +18211,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, All Year": {
+            "OffPeak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -15951,7 +18237,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, All Year": {
+            "OffPeak Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -15977,7 +18263,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16009,7 +18295,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16066,7 +18352,7 @@
             "Value": 0.19761115
           },
           "Demand": {
-            "Single Rate Tariff Period Weekdays, All Year": {
+            "Single Rate Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16119,7 +18405,7 @@
             "Value": 3.234
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16143,9 +18429,35 @@
               "Unit": "$/kWh",
               "Value": 0.47212000000000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "14:00:00",
+                  "10:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.47212000000000004,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16169,11 +18481,37 @@
               "Unit": "$/kWh",
               "Value": 0.36212,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "14:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.36212,
+              "Weekday": false,
               "Weekend": true
             }
           },
           "Demand": {
-            "Full Year Weekdays, All Year": {
+            "Full Year Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16226,7 +18564,7 @@
             "Value": 1.0598500000000002
           },
           "TOU": {
-            "Peak All Week, Nov - Mar": {
+            "Peak All Week Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -16243,9 +18581,28 @@
               "Unit": "$/kWh",
               "Value": 0.381151375,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week Nov Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "15:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.381151375,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, Nov - Mar": {
+            "OffPeak All Week Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -16266,9 +18623,32 @@
               "Unit": "$/kWh",
               "Value": 0.381151375,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Nov Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "15:00:00"
+                ],
+                "T2": [
+                  "21:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.381151375,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekdays, Apr - May": {
+            "OffPeak Weekdays Apr May Weekday": {
               "Month": [
                 4,
                 5
@@ -16284,7 +18664,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Peak Weekends, Apr - May": {
+            "Peak Weekends Apr May Weekend": {
               "Month": [
                 4,
                 5
@@ -16300,7 +18680,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Peak All Week, Jun - Aug": {
+            "Peak All Week Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -16315,9 +18695,26 @@
               "Unit": "$/kWh",
               "Value": 0.381151375,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week Jun Aug Weekend": {
+              "Month": [
+                6,
+                7,
+                8
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "15:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.381151375,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, Jun - Aug": {
+            "OffPeak All Week Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -16336,9 +18733,30 @@
               "Unit": "$/kWh",
               "Value": 0.381151375,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Jun Aug Weekend": {
+              "Month": [
+                6,
+                7,
+                8
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "15:00:00"
+                ],
+                "T2": [
+                  "21:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.381151375,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekdays, Sep - Oct": {
+            "OffPeak Weekdays Sep Oct Weekday": {
               "Month": [
                 9,
                 10
@@ -16354,7 +18772,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Peak Weekends, Sep - Oct": {
+            "Peak Weekends Sep Oct Weekend": {
               "Month": [
                 9,
                 10
@@ -16372,7 +18790,7 @@
             }
           },
           "Demand": {
-            "Summer: 1 Nov to 31 Mar Weekdays, Nov - Aug": {
+            "Summer: 1 Nov to 31 Mar Weekdays Nov Aug Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16401,7 +18819,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Winter: 1 Jun to 31 Aug Weekdays, Nov - Aug": {
+            "Winter: 1 Jun to 31 Aug Weekdays Nov Aug Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16454,7 +18872,7 @@
             "Value": 0.9458900000000001
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16480,7 +18898,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16504,9 +18922,35 @@
               "Unit": "$/kWh",
               "Value": 0.27995000000000003,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.27995000000000003,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16536,7 +18980,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Weekends, All Year": {
+            "Shoulder Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -16564,7 +19008,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16617,7 +19061,7 @@
             "Value": 1.9382000000000001
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16641,9 +19085,35 @@
               "Unit": "$/kWh",
               "Value": 0.357225,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "14:00:00",
+                  "10:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.357225,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16667,11 +19137,37 @@
               "Unit": "$/kWh",
               "Value": 0.2882,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "10:00:00",
+                  "14:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.2882,
+              "Weekday": false,
               "Weekend": true
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, Nov - Mar": {
+            "Time of Use Tariff Period Weekdays Nov Mar Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16693,7 +19189,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Time of Use Tariff Period Weekdays, Apr - Oct": {
+            "Time of Use Tariff Period Weekdays Apr Oct Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16768,7 +19264,7 @@
             "Value": 0.9229
           },
           "TOU": {
-            "Peak Weekdays, All Year": {
+            "Peak Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16794,7 +19290,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16818,9 +19314,35 @@
               "Unit": "$/kWh",
               "Value": 0.31074999999999997,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "22:00:00",
+                  "07:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.31074999999999997,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekdays, All Year": {
+            "Shoulder Weekdays All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16850,7 +19372,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Weekends, All Year": {
+            "Shoulder Weekends All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -16878,7 +19400,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16931,7 +19453,7 @@
             "Value": 1.16292
           },
           "TOU": {
-            "Shoulder 1 All Week, All Year": {
+            "Shoulder 1 All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16955,9 +19477,35 @@
               "Unit": "$/kWh",
               "Value": 0.23958000000000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder 1 All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "11:00:00",
+                  "15:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.23958000000000004,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -16981,11 +19529,37 @@
               "Unit": "$/kWh",
               "Value": 0.26752000000000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "15:00:00",
+                  "11:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.26752000000000004,
+              "Weekday": false,
               "Weekend": true
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17038,7 +19612,7 @@
             "Value": 1.4815779000000002
           },
           "TOU": {
-            "Peak Weekdays, Apr - Oct": {
+            "Peak Weekdays Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -17063,7 +19637,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Apr - Oct": {
+            "OffPeak Weekdays Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -17092,7 +19666,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Apr - Oct": {
+            "OffPeak Weekends Apr Oct Weekend": {
               "Month": [
                 4,
                 5,
@@ -17113,7 +19687,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekdays, Oct - Apr": {
+            "Peak Weekdays Oct Apr Weekday": {
               "Month": [
                 1,
                 2,
@@ -17138,7 +19712,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekdays, Oct - Apr": {
+            "OffPeak Weekdays Oct Apr Weekday": {
               "Month": [
                 1,
                 2,
@@ -17167,7 +19741,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Oct - Apr": {
+            "OffPeak Weekends Oct Apr Weekend": {
               "Month": [
                 1,
                 2,
@@ -17216,7 +19790,7 @@
             "Value": 0.2456611972941177
           },
           "Demand": {
-            "Demand period All Week, All Year": {
+            "Demand period All Week All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17243,6 +19817,35 @@
               "Unit": "$/kW/Day",
               "Value": 0.20790000000000003,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Demand period All Week All Year Weekend": {
+              "Min Demand (kW)": 0.0,
+              "Max Demand (kW)": 0.0,
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "Number of Peaks": 1,
+              "TimeIntervals": {
+                "T1": [
+                  "00:00",
+                  "00:00"
+                ]
+              },
+              "Unit": "$/kW/Day",
+              "Value": 0.20790000000000003,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -17269,7 +19872,7 @@
             "Value": 1.2575585
           },
           "TOU": {
-            "Peak Weekdays, Dec - Mar": {
+            "Peak Weekdays Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -17287,7 +19890,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Weekdays, Dec - Mar": {
+            "Shoulder Weekdays Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -17309,7 +19912,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak All Week, Dec - Mar": {
+            "OffPeak All Week Dec Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -17329,9 +19932,31 @@
               "Unit": "$/kWh",
               "Value": 0.23360128000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Dec Mar Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "12:00:00"
+                ],
+                "T2": [
+                  "20:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.23360128000000002,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak Weekends, Dec - Mar": {
+            "OffPeak Weekends Dec Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -17349,7 +19974,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Peak Weekdays, Jun - Aug": {
+            "Peak Weekdays Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -17366,7 +19991,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Off-Peak Weekends, Jun - Aug": {
+            "OffPeak Weekends Jun Aug Weekend": {
               "Month": [
                 6,
                 7,
@@ -17383,7 +20008,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, Jun - Aug": {
+            "OffPeak All Week Jun Aug Weekday": {
               "Month": [
                 6,
                 7,
@@ -17402,9 +20027,30 @@
               "Unit": "$/kWh",
               "Value": 0.23360128000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Jun Aug Weekend": {
+              "Month": [
+                6,
+                7,
+                8
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "16:00:00"
+                ],
+                "T3": [
+                  "20:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.23360128000000002,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, Apr - May": {
+            "OffPeak All Week Apr May Weekday": {
               "Month": [
                 4,
                 5
@@ -17418,9 +20064,25 @@
               "Unit": "$/kWh",
               "Value": 0.23360128000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Apr May Weekend": {
+              "Month": [
+                4,
+                5
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.23360128000000002,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, Sep - Nov": {
+            "OffPeak All Week Sep Nov Weekday": {
               "Month": [
                 9,
                 10,
@@ -17435,6 +20097,23 @@
               "Unit": "$/kWh",
               "Value": 0.23360128000000002,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week Sep Nov Weekend": {
+              "Month": [
+                9,
+                10,
+                11
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "00:00:00",
+                  "00:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.23360128000000002,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -17465,7 +20144,7 @@
             "Value": 0.329505
           },
           "Demand": {
-            "Usage Charges All Week, All Year": {
+            "Usage Charges All Week All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17492,6 +20171,35 @@
               "Unit": "$/kW/Day",
               "Value": 0.25311,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Usage Charges All Week All Year Weekend": {
+              "Min Demand (kW)": 0.0,
+              "Max Demand (kW)": 0.0,
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "Number of Peaks": 1,
+              "TimeIntervals": {
+                "T1": [
+                  "16:00",
+                  "21:00"
+                ]
+              },
+              "Unit": "$/kW/Day",
+              "Value": 0.25311,
+              "Weekday": false,
               "Weekend": true
             }
           },
@@ -17518,7 +20226,7 @@
             "Value": 1.2124383333333335
           },
           "TOU": {
-            "Peak All Week, All Year": {
+            "Peak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -17542,9 +20250,35 @@
               "Unit": "$/kWh",
               "Value": 0.3184866666666667,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Peak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "16:00:00",
+                  "21:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.3184866666666667,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -17568,9 +20302,35 @@
               "Unit": "$/kWh",
               "Value": 0.24434666666666668,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "11:00:00",
+                  "16:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.24434666666666668,
+              "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Week, All Year": {
+            "Shoulder All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -17594,11 +20354,37 @@
               "Unit": "$/kWh",
               "Value": 0.2891166666666667,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "21:00:00",
+                  "11:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.2891166666666667,
+              "Weekday": false,
               "Weekend": true
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17651,7 +20437,7 @@
             "Value": 1.16292
           },
           "TOU": {
-            "Shoulder 1 All Week, All Year": {
+            "Shoulder 1 All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -17675,9 +20461,35 @@
               "Unit": "$/kWh",
               "Value": 0.23958000000000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "Shoulder 1 All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "11:00:00",
+                  "15:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.23958000000000004,
+              "Weekday": false,
               "Weekend": true
             },
-            "Off-Peak All Week, All Year": {
+            "OffPeak All Week All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -17701,11 +20513,37 @@
               "Unit": "$/kWh",
               "Value": 0.26752000000000004,
               "Weekday": true,
+              "Weekend": false
+            },
+            "OffPeak All Week All Year Weekend": {
+              "Month": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ],
+              "TimeIntervals": {
+                "T1": [
+                  "15:00:00",
+                  "11:00:00"
+                ]
+              },
+              "Unit": "$/kWh",
+              "Value": 0.26752000000000004,
+              "Weekday": false,
               "Weekend": true
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays, All Year": {
+            "Time of Use Tariff Period Weekdays All Year Weekday": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [

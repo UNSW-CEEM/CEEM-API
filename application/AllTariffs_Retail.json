@@ -13,7 +13,7 @@
             "Value": 0.2117
           },
           "Demand": {
-            "Single Rate Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -67,7 +67,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03256
+            "Value": 0.033
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -140,7 +140,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.08735,
+              "Value": 0.0873,
               "Weekday": true,
               "Weekend": false
             },
@@ -166,7 +166,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.08735,
+              "Value": 0.0873,
               "Weekday": false,
               "Weekend": true
             },
@@ -229,7 +229,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0484
+            "Value": 0.048
           }
         },
         "Type": "TOU",
@@ -251,7 +251,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03465
+            "Value": 0.035
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -399,7 +399,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.04156
+            "Value": 0.042
           }
         },
         "Type": "TOU",
@@ -587,7 +587,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.06607
+            "Value": 0.066
           }
         },
         "Type": "TOU",
@@ -774,7 +774,7 @@
             }
           },
           "Demand": {
-            "Trf24C Bus(TOU Mthly Dmnd) Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -799,14 +799,14 @@
                 ]
               },
               "Unit": "$/kW/Day",
-              "Value": 0.008866,
+              "Value": 0.0089,
               "Weekday": true,
               "Weekend": false
             }
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.06607
+            "Value": 0.066
           }
         },
         "Type": "TOU_Demand",
@@ -832,7 +832,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.06607
+            "Value": 0.066
           }
         },
         "Type": "Single_Rate",
@@ -858,7 +858,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03562
+            "Value": 0.036
           }
         },
         "Type": "Single_Rate",
@@ -1002,7 +1002,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.04709
+            "Value": 0.047
           }
         },
         "Type": "TOU",
@@ -1155,7 +1155,7 @@
             }
           },
           "Demand": {
-            "Usage Charges Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -1187,7 +1187,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0297
+            "Value": 0.03
           }
         },
         "Type": "TOU_Demand",
@@ -1341,7 +1341,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0297
+            "Value": 0.03
           }
         },
         "Type": "TOU",
@@ -1366,7 +1366,7 @@
             "Value": 0.3256
           },
           "Demand": {
-            "Usage Charges Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -1441,7 +1441,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.31933,
+              "Value": 0.3193,
               "Weekday": true,
               "Weekend": false
             },
@@ -1530,7 +1530,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.009625
+            "Value": 0.0096
           }
         },
         "Type": "Single_Rate",
@@ -1562,7 +1562,7 @@
                 7,
                 8,
                 9,
-                10, 
+                10,
                 11,
                 12
               ],
@@ -1635,7 +1635,7 @@
             }
           },
           "Demand": {
-            "5 Day Time of Use Summer Demand with CL Summer Weekdays Dec Mar": {
+            "Demand Charge Weekdays Dec Mar": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -1656,7 +1656,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non Summer Weekdays Apr Nov": {
+            "Demand Charge Weekdays Apr Nov": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -1677,7 +1677,7 @@
                 ]
               },
               "Unit": "$/kW/Day",
-              "Value": 0.08294,
+              "Value": 0.0829,
               "Weekday": true,
               "Weekend": false
             }
@@ -1727,7 +1727,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.30118,
+              "Value": 0.3012,
               "Weekday": true,
               "Weekend": false
             },
@@ -1812,7 +1812,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.009625
+            "Value": 0.0096
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -1859,7 +1859,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.32659,
+              "Value": 0.3266,
               "Weekday": true,
               "Weekend": false
             },
@@ -1921,7 +1921,7 @@
             }
           },
           "Demand": {
-            "Demand period 1 Weekdays Dec Mar": {
+            "Demand Charge Weekdays Dec Mar": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -1942,7 +1942,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non Summer Weekdays Apr Nov": {
+            "Demand Charge Weekdays Apr Nov": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -2013,7 +2013,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.30118,
+              "Value": 0.3012,
               "Weekday": true,
               "Weekend": false
             },
@@ -2102,7 +2102,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.009625
+            "Value": 0.0096
           }
         },
         "Type": "Single_Rate",
@@ -2145,7 +2145,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.32659,
+              "Value": 0.3266,
               "Weekday": true,
               "Weekend": false
             },
@@ -2207,7 +2207,7 @@
             }
           },
           "Demand": {
-            "Demand period 1 Weekdays Dec Mar": {
+            "Demand Charge Weekdays Dec Mar": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -2228,7 +2228,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non Summer Weekdays Apr Nov": {
+            "Demand Charge Weekdays Apr Nov": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -2299,7 +2299,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.27797,
+              "Value": 0.278,
               "Weekday": true,
               "Weekend": false
             },
@@ -2388,7 +2388,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.009625
+            "Value": 0.0096
           }
         },
         "Type": "Single_Rate",
@@ -2431,7 +2431,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.29975,
+              "Value": 0.2998,
               "Weekday": true,
               "Weekend": false
             },
@@ -2525,7 +2525,7 @@
                 6,
                 7,
                 8,
-                9, 
+                9,
                 10,
                 11,
                 12
@@ -2537,7 +2537,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.29975,
+              "Value": 0.2998,
               "Weekday": true,
               "Weekend": false
             },
@@ -2599,7 +2599,7 @@
             }
           },
           "Demand": {
-            "Demand period 1 Weekdays Dec Mar": {
+            "Demand Charge Weekdays Dec Mar": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -2620,7 +2620,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non Summer Weekdays Apr Nov": {
+            "Demand Charge Weekdays Apr Nov": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -2674,7 +2674,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.009625
+            "Value": 0.0096
           }
         },
         "Type": "Single_Rate",
@@ -2696,7 +2696,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03465
+            "Value": 0.035
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -2844,7 +2844,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0484
+            "Value": 0.048
           }
         },
         "Type": "TOU",
@@ -2870,7 +2870,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.09276
+            "Value": 0.093
           }
         },
         "Type": "Single_Rate",
@@ -2998,7 +2998,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.09276
+            "Value": 0.093
           }
         },
         "Type": "TOU",
@@ -3020,7 +3020,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.02112
+            "Value": 0.021
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -3125,7 +3125,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -3150,7 +3150,7 @@
                 ]
               },
               "Unit": "$/kW/Day",
-              "Value": 0.00996,
+              "Value": 0.01,
               "Weekday": true,
               "Weekend": false
             }
@@ -3325,7 +3325,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0363
+            "Value": 0.036
           }
         },
         "Type": "SToU",
@@ -3427,7 +3427,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0363
+            "Value": 0.036
           }
         },
         "Type": "TOU",
@@ -3594,7 +3594,7 @@
             }
           },
           "Demand": {
-            "Summer Weekdays Nov Mar": {
+            "Demand Charge Weekdays Nov Mar": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -3612,14 +3612,14 @@
                 ]
               },
               "Unit": "$/kW/Day",
-              "Value": 0.09471,
+              "Value": 0.0947,
               "Weekday": true,
               "Weekend": false
             }
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0363
+            "Value": 0.036
           }
         },
         "Type": "STOU_Demand",
@@ -3645,7 +3645,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03436
+            "Value": 0.034
           }
         },
         "Type": "Single_Rate",
@@ -3789,7 +3789,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.04105
+            "Value": 0.041
           }
         },
         "Type": "TOU",
@@ -4227,7 +4227,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0275
+            "Value": 0.028
           }
         },
         "Type": "TOU",
@@ -4278,7 +4278,7 @@
             "Value": 0.2842
           },
           "Demand": {
-            "Single Rate Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -4509,7 +4509,7 @@
             }
           },
           "Demand": {
-            "Summer Weekdays Nov Mar": {
+            "Demand Charge Weekdays Nov Mar": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -4531,7 +4531,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non Summer Weekdays Apr Oct": {
+            "Demand Charge Weekdays Apr Oct": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -4558,7 +4558,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0363
+            "Value": 0.036
           }
         },
         "Type": "STOU_Demand",
@@ -4689,7 +4689,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -4901,7 +4901,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03465
+            "Value": 0.035
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -5021,7 +5021,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0484
+            "Value": 0.048
           }
         },
         "Type": "SToU",
@@ -5162,7 +5162,7 @@
             }
           },
           "Demand": {
-            "Summer Weekdays Nov Mar": {
+            "Demand Charge Weekdays Nov Mar": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -5184,7 +5184,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non Summer/Non Winter Weekdays Apr May": {
+            "Demand Charge Weekdays Apr May": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -5203,7 +5203,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Winter Weekdays Jun Aug": {
+            "Demand Charge Weekdays Jun Aug": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -5223,7 +5223,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Non Summer/Non Winter Weekdays Sep Oct": {
+            "Demand Charge Weekdays Sep Oct": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -5245,7 +5245,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0363
+            "Value": 0.036
           }
         },
         "Type": "STOU_Demand",
@@ -5398,7 +5398,7 @@
             }
           },
           "Demand": {
-            "Usage Charges Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -5430,7 +5430,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0297
+            "Value": 0.03
           }
         },
         "Type": "TOU_Demand",
@@ -5584,7 +5584,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0297
+            "Value": 0.03
           }
         },
         "Type": "TOU",
@@ -5609,7 +5609,7 @@
             "Value": 0.3256
           },
           "Demand": {
-            "Usage Charges Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -5663,7 +5663,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.04639
+            "Value": 0.046
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -5984,7 +5984,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Nov Mar Weekday": {
+            "Solar Sharer Nov Mar Weekday": {
               "Month": [
                 1,
                 2,
@@ -6010,7 +6010,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder Nov Mar Weekend": {
+            "Solar Sharer Nov Mar Weekend": {
               "Month": [
                 1,
                 2,
@@ -6219,7 +6219,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03245
+            "Value": 0.032
           }
         },
         "Type": "TOU",
@@ -6368,7 +6368,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Year Weekday": {
+            "Solar Sharer All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -6394,7 +6394,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder All Year Weekend": {
+            "Solar Sharer All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -6449,7 +6449,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0329
+            "Value": 0.033
           }
         },
         "Type": "Single_Rate",
@@ -6584,7 +6584,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -6609,7 +6609,7 @@
                 ]
               },
               "Unit": "$/kW/Day",
-              "Value": 0.006207,
+              "Value": 0.0062,
               "Weekday": true,
               "Weekend": false
             }
@@ -7019,7 +7019,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder 1 All Year Weekday": {
+            "Shoulder All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7045,7 +7045,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder 1 All Year Weekend": {
+            "Shoulder All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -7100,7 +7100,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03269
+            "Value": 0.033
           }
         },
         "Type": "Single_Rate",
@@ -7126,7 +7126,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03905
+            "Value": 0.039
           }
         },
         "Type": "Single_Rate",
@@ -7151,7 +7151,7 @@
             "Value": 0.2977
           },
           "Demand": {
-            "Usage Charges All Week All Year": {
+            "Demand Charge All Week All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -7183,7 +7183,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0297
+            "Value": 0.03
           }
         },
         "Type": "Demand",
@@ -7379,7 +7379,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.04204
+            "Value": 0.042
           }
         },
         "Type": "TOU",
@@ -7508,7 +7508,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekend All Year": {
+            "Solar Sharer Weekend All Year": {
               "Month": [
                 1,
                 2,
@@ -7696,7 +7696,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Year Weekday": {
+            "Solar Sharer All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7722,7 +7722,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder All Year Weekend": {
+            "Solar Sharer All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -7748,7 +7748,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder 1 All Year Weekday": {
+            "Shoulder All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -7774,7 +7774,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder 1 All Year Weekend": {
+            "Shoulder All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -7803,7 +7803,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.176
+            "Value": 0.18
           }
         },
         "Type": "Solar Sharer",
@@ -7991,7 +7991,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.01833
+            "Value": 0.018
           }
         },
         "Type": "TOU",
@@ -8017,7 +8017,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.09276
+            "Value": 0.093
           }
         },
         "Type": "Single_Rate",
@@ -8127,7 +8127,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.09276
+            "Value": 0.093
           }
         },
         "Type": "TOU",
@@ -8289,7 +8289,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.008708
+            "Value": 0.0087
           }
         },
         "Type": "Single_Rate",
@@ -8451,7 +8451,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.008708
+            "Value": 0.0087
           }
         },
         "Type": "Single_Rate",
@@ -8613,7 +8613,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.008848
+            "Value": 0.0088
           }
         },
         "Type": "Single_Rate",
@@ -8771,7 +8771,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.008708
+            "Value": 0.0087
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -8937,7 +8937,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.008462
+            "Value": 0.0085
           }
         },
         "Type": "Single_Rate",
@@ -9098,7 +9098,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -9123,7 +9123,7 @@
                 ]
               },
               "Unit": "$/kW/Day",
-              "Value": 0.006207,
+              "Value": 0.0062,
               "Weekday": true,
               "Weekend": false
             }
@@ -9423,7 +9423,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Year Weekday": {
+            "Solar Sharer All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -9449,7 +9449,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder All Year Weekend": {
+            "Solar Sharer All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -9500,7 +9500,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03011
+            "Value": 0.03
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -9599,7 +9599,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.06901,
+              "Value": 0.069,
               "Weekday": true,
               "Weekend": false
             },
@@ -9625,7 +9625,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.06901,
+              "Value": 0.069,
               "Weekday": false,
               "Weekend": true
             },
@@ -9684,7 +9684,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03025
+            "Value": 0.03
           }
         },
         "Type": "TOU",
@@ -9861,7 +9861,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder 1 All Year Weekday": {
+            "Solar Sharer All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -9887,7 +9887,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder 1 All Year Weekend": {
+            "Solar Sharer All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -10077,7 +10077,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -10102,7 +10102,7 @@
                 ]
               },
               "Unit": "$/kW/Day",
-              "Value": 0.006207,
+              "Value": 0.0062,
               "Weekday": true,
               "Weekend": false
             }
@@ -10390,7 +10390,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Year Weekday": {
+            "Solar Sharer All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -10416,7 +10416,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder All Year Weekend": {
+            "Solar Sharer All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -10624,7 +10624,7 @@
             }
           },
           "Demand": {
-            "Trf 14C Res (TOU Demand) All Week All Year": {
+            "Demand Charge All Week All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -10649,14 +10649,14 @@
                 ]
               },
               "Unit": "$/kW/Day",
-              "Value": 0.008813,
+              "Value": 0.0088,
               "Weekday": true,
               "Weekend": true
             }
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.06607
+            "Value": 0.066
           }
         },
         "Type": "TOU_Demand",
@@ -10836,7 +10836,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.06607
+            "Value": 0.066
           }
         },
         "Type": "TOU",
@@ -10862,7 +10862,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.06607
+            "Value": 0.066
           }
         },
         "Type": "Single_Rate",
@@ -11011,7 +11011,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder All Year Weekday": {
+            "Solar Sharer All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -11037,7 +11037,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder All Year Weekend": {
+            "Solar Sharer All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -11210,7 +11210,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03245
+            "Value": 0.032
           }
         },
         "Type": "TOU",
@@ -11236,7 +11236,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03245
+            "Value": 0.032
           }
         },
         "Type": "Single_Rate",
@@ -11262,7 +11262,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03905
+            "Value": 0.039
           }
         },
         "Type": "Single_Rate",
@@ -11287,7 +11287,7 @@
             "Value": 0.2977
           },
           "Demand": {
-            "Usage Charges All Week All Year": {
+            "Demand Charge All Week All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -11319,7 +11319,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0297
+            "Value": 0.03
           }
         },
         "Type": "Demand",
@@ -11515,7 +11515,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.04204
+            "Value": 0.042
           }
         },
         "Type": "TOU",
@@ -11644,7 +11644,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder Weekend All Year": {
+            "Solar Sharer Weekend All Year": {
               "Month": [
                 1,
                 2,
@@ -13409,7 +13409,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.08852,
+              "Value": 0.0885,
               "Weekday": true,
               "Weekend": false
             },
@@ -13435,7 +13435,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.08852,
+              "Value": 0.0885,
               "Weekday": false,
               "Weekend": true
             }
@@ -13923,7 +13923,7 @@
         "Name": "Block FiT (Endeavour Energy) Small Business",
         "State": "NSW",
         "Type": "Feed in Tariff",
-        "Year": "6",
+        "Year": "2026",
         "ProviderType": "Retailer",
         "Provider": "1st Energy",
         "Tariff ID": "NSW_FiT_Structure_11",
@@ -15844,7 +15844,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0
+            "Value": 0.0
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -15870,7 +15870,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0
+            "Value": 0.0
           },
           "FlatRate": {
             "Unit": "$/kWh",
@@ -15896,7 +15896,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0884
+            "Value": 0.088
           },
           "TOU": {
             "Off Peak Weekday": {
@@ -16092,7 +16092,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0884
+            "Value": 0.088
           },
           "TOU": {
             "Off Peak Weekday": {
@@ -16420,7 +16420,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16583,7 +16583,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16615,7 +16615,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0605
+            "Value": 0.06
           }
         },
         "Type": "TOU_Demand",
@@ -16640,7 +16640,7 @@
             "Value": 0.3352
           },
           "Demand": {
-            "Single Rate Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16803,7 +16803,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16835,7 +16835,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0605
+            "Value": 0.06
           }
         },
         "Type": "TOU_Demand",
@@ -16878,7 +16878,7 @@
                 ]
               },
               "Unit": "$/kWh",
-              "Value": 0.33440,
+              "Value": 0.3344,
               "Weekday": true,
               "Weekend": false
             },
@@ -16940,7 +16940,7 @@
             }
           },
           "Demand": {
-            "Demand period All Week All Year": {
+            "Demand Charge All Week All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -16972,7 +16972,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.00825
+            "Value": 0.0083
           }
         },
         "Type": "TOU_Demand",
@@ -16997,7 +16997,7 @@
             "Value": 0.2684
           },
           "Demand": {
-            "Demand period All Week All Year": {
+            "Demand Charge All Week All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17029,7 +17029,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.00022
+            "Value": 0.0002
           }
         },
         "Type": "Demand",
@@ -17160,7 +17160,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17192,7 +17192,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0605
+            "Value": 0.06
           }
         },
         "Type": "TOU_Demand",
@@ -17356,7 +17356,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.1054
+            "Value": 0.11
           }
         },
         "Type": "SToU",
@@ -17381,7 +17381,7 @@
             "Value": 0.2583
           },
           "Demand": {
-            "Single Rate Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17413,7 +17413,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.1054
+            "Value": 0.11
           }
         },
         "Type": "Demand",
@@ -17544,7 +17544,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17576,7 +17576,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0605
+            "Value": 0.06
           }
         },
         "Type": "TOU_Demand",
@@ -17703,7 +17703,7 @@
             }
           },
           "Demand": {
-            "Full Year Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17735,7 +17735,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0968
+            "Value": 0.097
           }
         },
         "Type": "TOU_Demand",
@@ -17760,7 +17760,7 @@
             "Value": 0.1945
           },
           "Demand": {
-            "Single Rate Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17939,7 +17939,7 @@
             }
           },
           "Demand": {
-            "Summer Peak Weekdays Nov Aug": {
+            "Demand Charge Weekdays Nov Aug": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -17967,7 +17967,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.04086
+            "Value": 0.041
           }
         },
         "Type": "STOU_Demand",
@@ -18125,7 +18125,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0275
+            "Value": 0.028
           }
         },
         "Type": "TOU",
@@ -18282,7 +18282,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -18314,7 +18314,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0275
+            "Value": 0.028
           }
         },
         "Type": "TOU_Demand",
@@ -18573,7 +18573,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays Nov Mar": {
+            "Demand Charge Weekdays Nov Mar": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -18595,7 +18595,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Time of Use Tariff Period Weekdays Apr Oct": {
+            "Demand Charge Weekdays Apr Oct": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -18615,7 +18615,7 @@
                 ]
               },
               "Unit": "$/kW/Day",
-              "Value": 0.09174,
+              "Value": 0.0917,
               "Weekday": true,
               "Weekend": false
             }
@@ -18749,7 +18749,7 @@
             }
           },
           "Demand": {
-            "Full Year Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -18781,7 +18781,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.03227
+            "Value": 0.032
           }
         },
         "Type": "TOU_Demand",
@@ -18802,7 +18802,7 @@
             "Value": 1.225
           },
           "TOU": {
-            "Shoulder 1 All Year Weekday": {
+            "Shoulder All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -18828,7 +18828,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder 1 All Year Weekend": {
+            "Shoulder All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -18908,7 +18908,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -18940,7 +18940,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0275
+            "Value": 0.028
           }
         },
         "Type": "TOU_Demand",
@@ -19036,7 +19036,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder 1 Apr Oct Weekday": {
+            "Shoulder Apr Oct Weekday": {
               "Month": [
                 4,
                 5,
@@ -19057,7 +19057,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder 1 Apr Oct Weekend": {
+            "Shoulder Apr Oct Weekend": {
               "Month": [
                 4,
                 5,
@@ -19153,7 +19153,7 @@
               "Weekday": false,
               "Weekend": true
             },
-            "Shoulder 1 Oct Apr Weekday": {
+            "Shoulder Oct Apr Weekday": {
               "Month": [
                 1,
                 2,
@@ -19174,7 +19174,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder 1 Oct Apr Weekend": {
+            "Shoulder Oct Apr Weekend": {
               "Month": [
                 1,
                 2,
@@ -19223,7 +19223,7 @@
             "Value": 0.2149
           },
           "Demand": {
-            "Demand period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -19255,7 +19255,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0165
+            "Value": 0.017
           }
         },
         "Type": "Demand",
@@ -19280,7 +19280,7 @@
             "Value": 0.2953
           },
           "Demand": {
-            "Usage Charges All Week All Year": {
+            "Demand Charge All Week All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -19312,7 +19312,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0462
+            "Value": 0.046
           }
         },
         "Type": "Demand",
@@ -19491,7 +19491,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -19654,7 +19654,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -19686,7 +19686,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0275
+            "Value": 0.028
           }
         },
         "Type": "TOU_Demand",
@@ -19707,7 +19707,7 @@
             "Value": 1.225
           },
           "TOU": {
-            "Shoulder 1 All Year Weekday": {
+            "Shoulder All Year Weekday": {
               "Month": [
                 1,
                 2,
@@ -19733,7 +19733,7 @@
               "Weekday": true,
               "Weekend": false
             },
-            "Shoulder 1 All Year Weekend": {
+            "Shoulder All Year Weekend": {
               "Month": [
                 1,
                 2,
@@ -19813,7 +19813,7 @@
             }
           },
           "Demand": {
-            "Time of Use Tariff Period Weekdays All Year": {
+            "Demand Charge Weekdays All Year": {
               "Min Demand (kW)": 0.0,
               "Max Demand (kW)": 0.0,
               "Month": [
@@ -19845,7 +19845,7 @@
           },
           "FiT": {
             "Unit": "$/kWh",
-            "Value": 0.0275
+            "Value": 0.028
           }
         },
         "Type": "TOU_Demand",
